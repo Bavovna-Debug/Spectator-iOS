@@ -1,0 +1,97 @@
+/******************************************************************************/
+/*                                                                            */
+/*  Spectator                                                                 */
+/*                                                                            */
+/*  Copyright (c) 2014 Meine Werke. All rights reserved.                      */
+/*                                                                            */
+/******************************************************************************/
+
+"SERVER_LIST_TITLE"                 = "Rechner";
+"INTRODUCTION_BUTTON"               = "Einführung";
+"ADD_SERVER_BUTTON"                 = "Hinzufügen";
+"SETTINGS"                          = "Einstellungen";
+
+"INTRODUCTION_PAGE_TITLE"           = "«Spectator»";
+"INTRODUCTION_BACK_BUTTON"          = "Zurück";
+
+"SERVER_EDIT_FORM_TITLE"            = "Rechner";
+"SERVER_EDIT_CANCEL_BUTTON"         = "Abbrechen";
+"SERVER_EDIT_SUBMIT_BUTTON"         = "Übernehmen";
+
+"SERVER_EDIT_SERVER_NAME_HELP"      = "Sie können dem Rechner einen assoziativen Namen geben, wie «Hauptserver», «Datenbank-Server», «Office-Server», «Michael's Laptop» ...";
+"SERVER_EDIT_SERVER_NAME_LABEL"     = "Rechnername:";
+
+"SERVER_EDIT_DNS_NAME_HELP"         = "DNS-Name ist entweder ein Hostname oder IP-Adresse (IPv4 und IPv6 werden unterstützt).";
+"SERVER_EDIT_DNS_NAME_LABEL"        = "DNS-Name:";
+
+"SERVER_EDIT_PORT_NUMBER_HELP"      = "GKrellM Port-Nummer auf dem Rechner (Standard: 19150).";
+"SERVER_EDIT_PORT_NUMBER_LABEL"     = "Port-Nummer:";
+
+"UPTIME_PREFIX"                     = "Läuft";
+"UPTIME_DAYS"                       = "Tag(e)";
+
+"TAB_NAME_CPU"                      = "Processoren";
+"TAB_NAME_MOUNTS"                   = "Dateisysteme";
+"TAB_NAME_NETWORK"                  = "Netzwerk";
+"TAB_NAME_CONNECTIONS"              = "Verbindungen";
+
+"CPU_USAGE_SUMMARY_GRAPH"           = "CPU Resümee";
+"CPU_USAGE_PER_UNIT"                = "CPU Auslastung pro Einheit";
+"CPU_USAGE_USER"                    = "User:";
+"CPU_USAGE_SYSTEM"                  = "System:";
+"CPU_USAGE_NICE"                    = "Nice:";
+"CPU_USAGE_IDLE"                    = "Idle:";
+
+"MEMORY_USAGE_PANEL"                = "Hauptspeicher";
+"MEMORY_BUFFERS"                    = "Puffer:";
+"MEMORY_CACHED"                     = "Im Cache:";
+"MEMORY_USED"                       = "Benutzt:";
+"MEMORY_FREE"                       = "Frei:";
+
+"SWAP_USAGE_PANEL"                  = "Swap";
+"SWAP_USED"                         = "Benutzt:";
+"SWAP_FREE"                         = "Frei:";
+
+"DISK_TOTAL_SIZE"                   = "Gesamtkapazität:";
+"DISK_USED_SIZE"                    = "Benutzt:";
+"DISK_AVAILABLE_SIZE"               = "Verfügbar:";
+"DISK_RESERVED_SIZE"                = "Super Benutzer:";
+
+"NETWORK_TRAFFIC_TOTAL"             = "Gesamtmenge der übertragenen Daten";
+"NETWORK_TRAFFIC_GAGING"            = "Übertragen seit:";
+"NETWORK_TRAFFIC_RX"                = "Empfangen:";
+"NETWORK_TRAFFIC_TX"                = "Gesendet:";
+
+"BYTES" = "Byte";
+"KB"    = "KB";
+"MB"    = "MB";
+"GB"    = "GB";
+"TB"    = "TB";
+
+"ALERT_TITLE_CONFIRMATION"          = "Bestätigen";
+"ALERT_TITLE_WARNING"               = "Warnung";
+"ALERT_TITLE_ERROR"                 = "Fehler";
+"ALERT_BUTTON_CANCEL"               = "Abbrechen";
+"ALERT_BUTTON_OK"                   = "OK";
+"ALERT_BUTTON_NO"                   = "Nein";
+"ALERT_BUTTON_YES"                  = "Ja";
+"ALERT_BUTTON_IGNORE"               = "Ignorieren";
+"ALERT_BUTTON_RECONNECT"            = "Wiederherstellen";
+
+"ALERT_DELETE_SERVER_MESSAGE"       = "Eintrag für «%@» löschen?";
+
+"ALERT_BAD_DNS_NAME"                = "«%@» hat ungültigen DNS-Namen %@. Sollte ein Hostname oder IP-Adresse sein (IPv4 und IPv6 werden unterstützt).";
+
+"ALERT_SOCKET_READ_TIMED_OUT"       = "Verbindung mit «%@» wurde verloren. Soll die Verbindung wiederhergestellt werden?";
+
+"ALERT_CONNECT_TIMED_OUT"           = "Verbindung mit «%@» kann nicht erstellt werden: Zeitüberschreitung bei Verbindung.";
+
+"ALERT_CONNECTION_REFUSED"          = "Verbindung mit «%@» kann nicht erstellt werden: Verbindung wurde seitens Server verweigert.";
+
+"ALERT_NO_ROUTE_TO_HOST"            = "Verbindung mit «%@» unter DNS-Namen %@ kann nicht erstellt werden: keine Verbindung.";
+
+"ALERT_OTHER_SOCKET_ERROR"          = "Kann nicht mit «%@» unter DNS-Namen %@ und Port-Nummer %d verbinden.";
+
+"ALERT_CONNECTION_LOST"             = "Verbindung mit «%@» wurde gebrochen. Soll die Verbindung wiederhergestellt werden?";
+
+"ALERT_SERVER_ERROR"                = "Verbindung mit «%@» wurde aufgrund eines GKrellM-Fehlers seitens Server abgebrochen. Bitte überprüfen Sie GKrellM Einstellungen auf «%@».";

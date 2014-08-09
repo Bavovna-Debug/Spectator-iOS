@@ -1,0 +1,97 @@
+/******************************************************************************/
+/*                                                                            */
+/*  Spectator                                                                 */
+/*                                                                            */
+/*  Copyright (c) 2014 Meine Werke. All rights reserved.                      */
+/*                                                                            */
+/******************************************************************************/
+
+"SERVER_LIST_TITLE"                 = "Комп'ютери";
+"INTRODUCTION_BUTTON"               = "Введення";
+"ADD_SERVER_BUTTON"                 = "Додати";
+"SETTINGS"                          = "Налаштування";
+
+"INTRODUCTION_PAGE_TITLE"           = "«Spectator»";
+"INTRODUCTION_BACK_BUTTON"          = "Назад";
+
+"SERVER_EDIT_FORM_TITLE"            = "Комп'ютер";
+"SERVER_EDIT_CANCEL_BUTTON"         = "Скасувати";
+"SERVER_EDIT_SUBMIT_BUTTON"         = "Прийняти";
+
+"SERVER_EDIT_SERVER_NAME_HELP"      = "Ви можете надати комп'ютеру асоціативне ім'я, таке як «Головний сервер», «Сервер баз даних», «Сервер в офісі», «Ноутбук Віктора» ...";
+"SERVER_EDIT_SERVER_NAME_LABEL"     = "Ім'я комп'ютера:";
+
+"SERVER_EDIT_DNS_NAME_HELP"         = "DNS ім'я це або повне ім'я хоста або IP-адрес комп'ютер (підтримуються IPv4 і IPv6).";
+"SERVER_EDIT_DNS_NAME_LABEL"        = "DNS ім'я:";
+
+"SERVER_EDIT_PORT_NUMBER_HELP"      = "Номер порту GKrellM на комп'ютері (за замовчуванням: 19150).";
+"SERVER_EDIT_PORT_NUMBER_LABEL"     = "Номер порту:";
+
+"UPTIME_PREFIX"                     = "Працює";
+"UPTIME_DAYS"                       = "дн.";
+
+"TAB_NAME_CPU"                      = "Процесори";
+"TAB_NAME_MOUNTS"                   = "Файлові системи";
+"TAB_NAME_NETWORK"                  = "Мережа";
+"TAB_NAME_CONNECTIONS"              = "З'єднання";
+
+"CPU_USAGE_SUMMARY_GRAPH"           = "Завантаження процесорів (загальне)";
+"CPU_USAGE_PER_UNIT"                = "Завантаження процесорів (детально)";
+"CPU_USAGE_USER"                    = "User:";
+"CPU_USAGE_SYSTEM"                  = "System:";
+"CPU_USAGE_NICE"                    = "Nice:";
+"CPU_USAGE_IDLE"                    = "Idle:";
+
+"MEMORY_USAGE_PANEL"                = "Основна пам'ять";
+"MEMORY_BUFFERS"                    = "Буфери:";
+"MEMORY_CACHED"                     = "Кеш:";
+"MEMORY_USED"                       = "Використ.:";
+"MEMORY_FREE"                       = "Вільно:";
+
+"SWAP_USAGE_PANEL"                  = "Файл підкачки (swap)";
+"SWAP_USED"                         = "Використ.:";
+"SWAP_FREE"                         = "Вільно:";
+
+"DISK_TOTAL_SIZE"                   = "Загальний обсяг:";
+"DISK_USED_SIZE"                    = "Використано:";
+"DISK_AVAILABLE_SIZE"               = "Доступно:";
+"DISK_RESERVED_SIZE"                = "Резерв (root):";
+
+"NETWORK_TRAFFIC_TOTAL"             = "Загальний обсяг переданих даних";
+"NETWORK_TRAFFIC_GAGING"            = "За останні:";
+"NETWORK_TRAFFIC_RX"                = "Отримано:";
+"NETWORK_TRAFFIC_TX"                = "Відправлено:";
+
+"BYTES" = "байт";
+"KB"    = "КБ";
+"MB"    = "МБ";
+"GB"    = "ГБ";
+"TB"    = "ТБ";
+
+"ALERT_TITLE_CONFIRMATION"          = "Підтвердіть";
+"ALERT_TITLE_WARNING"               = "Попередження";
+"ALERT_TITLE_ERROR"                 = "Помилка";
+"ALERT_BUTTON_CANCEL"               = "Відміна";
+"ALERT_BUTTON_OK"                   = "OK";
+"ALERT_BUTTON_NO"                   = "Ні";
+"ALERT_BUTTON_YES"                  = "Так";
+"ALERT_BUTTON_IGNORE"               = "Ігнорувати";
+"ALERT_BUTTON_RECONNECT"            = "Відновити";
+
+"ALERT_DELETE_SERVER_MESSAGE"       = "Видалити запис про «%@»?";
+
+"ALERT_BAD_DNS_NAME"                = "«%@» має неправильне DNS ім'я %@. DNS ім'ям має бути ім'я хоста або IP-адрес (підтримуються IPv4 і IPv6).";
+
+"ALERT_SOCKET_READ_TIMED_OUT"       = "З'єднання з «%@» перервано. Відновити з'єднання?";
+
+"ALERT_CONNECT_TIMED_OUT"           = "Неможливо підключитись до «%@»: тайм-аут підключення.";
+
+"ALERT_CONNECTION_REFUSED"          = "Неможливо підключитись до «%@»: запит до з'єднання відмовлено сервером.";
+
+"ALERT_NO_ROUTE_TO_HOST"            = "Неможливо підключитись до «%@» використовуючи DNS ім'я %@: зв'язок відсутній.";
+
+"ALERT_OTHER_SOCKET_ERROR"          = "Неможливо підключитись до «%@» використовуючи DNS ім'я %@ і номер порту %d.";
+
+"ALERT_CONNECTION_LOST"             = "Зв'язок з «%@» перервано. Відновити зв'язок?";
+
+"ALERT_SERVER_ERROR"                = "Зв'язок з «%@» було перервано через помилку GKrellM зі сторони комп'ютера. Будь ласка, перевірте налаштування GKrellM на «%@».";

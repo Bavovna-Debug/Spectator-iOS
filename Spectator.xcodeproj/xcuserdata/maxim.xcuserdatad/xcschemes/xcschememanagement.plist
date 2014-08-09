@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Spectator.xcscheme</key>
+		<key>Spectator (English).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Spectator (German).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Spectator Lite.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +28,41 @@
 			<true/>
 		</dict>
 		<key>940A203918EBD89C00620F45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9418BCE618EC3ABB00AE9EA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>943BAB5618EBE73100A44CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>943BAB6C18EBE73100A44CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>943BAB9418EC385300A44CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>943BABA618EC387600A44CBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>944EF22918EC6AC60047E519</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>944EF23F18EC6AC60047E519</key>
 		<dict>
 			<key>primary</key>
 			<true/>

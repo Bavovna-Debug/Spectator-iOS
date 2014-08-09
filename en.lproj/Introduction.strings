@@ -1,0 +1,45 @@
+/******************************************************************************/
+/*                                                                            */
+/*  Spectator                                                                 */
+/*                                                                            */
+/*  Copyright (c) 2014 Meine Werke. All rights reserved.                      */
+/*                                                                            */
+/******************************************************************************/
+
+"INTRODUCTION" =
+"What is «GKrellM»?
+
+«GKrellM» (GNU Krell Monitors/Meters) is a well known system monitor software that creates a single process stack of system monitors. It can be used to monitor the computer activity. It shows the system administrators how computer resources are used under different circumstances and let them better understand how to optimize computer performance. Especially useful for administrators of large servers.
+
+What is «Spectator», what does it have to do with «GKrellM» and what is «Spectator» good for?
+
+«Spectator» is an iOS client application for «GKrellM». «Spectator» establishes a connection with a «GKrellM» instance running on a remote computer and presents to user the following information about remote computer in a „human readable form“:
+•	Kernel version.
+•	Computer running time (uptime since last boot).
+•	CPU load graph.
+•	CPU usage per processor kern differenced by user/nice/system times.
+•	Memory and swap usage information.
+•	File systems usage - used/free/available disk space.
+•	Network traffic - amount of received/sent data (with „stopwatch“ function).
+•	List of active network connections.
+
+Who is the target audience for «Spectator»?
+
+«Spectator» is useful for:
+1.	System administrators of large servers who want to be able to get performance information about their computer systems around the clock.
+2.	Software developers and testers who want to control how computer resources are used when their new developed application is running.
+
+«Spectator» …
+… does not contain Ads.
+… does not require any In-App Purchases.
+… does not require any kind of subscription.
+… does not have any limitations on the number of remote computers/servers.
+… allows simultaneous connections to several «GKrellM» instances on different computers.
+
+Privacy policy:
+
+«Spectator» does not store any information about your servers for statistical or any other purpose. Exception: server name, its IP address and port number, provided by you, are stored in the App's settings. These settings are kept on your device only - they would never be stored in the iCloud or transferred through the network in any form.
+
+«Spectator» does not send any kind of information from your iOS device to the third party people/servers.
+
+«Spectator» establishes network connections to the servers only under hostnames or IP addresses, provided by you in the settings. Network connection is established only to the TCP port number provided by you individually for each server (default is 19150). Once connection is lost you are prompted to re-establish the connection. «Spectator» does not re-establish lost connections automatically neither establishes connections in a background mode (not under user control).";

@@ -1,0 +1,97 @@
+/******************************************************************************/
+/*                                                                            */
+/*  Spectator                                                                 */
+/*                                                                            */
+/*  Copyright (c) 2014 Meine Werke. All rights reserved.                      */
+/*                                                                            */
+/******************************************************************************/
+
+"SERVER_LIST_TITLE"                 = "Computers";
+"INTRODUCTION_BUTTON"               = "Introduction";
+"ADD_SERVER_BUTTON"                 = "Add";
+"SETTINGS"                          = "Settings";
+
+"INTRODUCTION_PAGE_TITLE"           = "«Spectator»";
+"INTRODUCTION_BACK_BUTTON"          = "Back";
+
+"SERVER_EDIT_FORM_TITLE"            = "Computer";
+"SERVER_EDIT_CANCEL_BUTTON"         = "Cancel";
+"SERVER_EDIT_SUBMIT_BUTTON"         = "Submit";
+
+"SERVER_EDIT_SERVER_NAME_HELP"      = "You can give a computer an associative name like «Main server», «Database server», «Office server», «Mike's laptop» ...";
+"SERVER_EDIT_SERVER_NAME_LABEL"     = "Computer name:";
+
+"SERVER_EDIT_DNS_NAME_HELP"         = "DNS name is either a hostname or IP address (IPv4 and IPv6 are supported).";
+"SERVER_EDIT_DNS_NAME_LABEL"        = "DNS name:";
+
+"SERVER_EDIT_PORT_NUMBER_HELP"      = "GKrellM port number on a computer (default: 19150).";
+"SERVER_EDIT_PORT_NUMBER_LABEL"     = "Port number:";
+
+"UPTIME_PREFIX"                     = "Uptime";
+"UPTIME_DAYS"                       = "day(s)";
+
+"TAB_NAME_CPU"                      = "Processors";
+"TAB_NAME_MOUNTS"                   = "File systems";
+"TAB_NAME_NETWORK"                  = "Network";
+"TAB_NAME_CONNECTIONS"              = "Connections";
+
+"CPU_USAGE_SUMMARY_GRAPH"           = "CPU summary";
+"CPU_USAGE_PER_UNIT"                = "CPU usage per unit";
+"CPU_USAGE_USER"                    = "User:";
+"CPU_USAGE_SYSTEM"                  = "System:";
+"CPU_USAGE_NICE"                    = "Nice:";
+"CPU_USAGE_IDLE"                    = "Idle:";
+
+"MEMORY_USAGE_PANEL"                = "Memory";
+"MEMORY_BUFFERS"                    = "Buffers:";
+"MEMORY_CACHED"                     = "Cached:";
+"MEMORY_USED"                       = "Used:";
+"MEMORY_FREE"                       = "Free:";
+
+"SWAP_USAGE_PANEL"                  = "Swap";
+"SWAP_USED"                         = "Used:";
+"SWAP_FREE"                         = "Free:";
+
+"DISK_TOTAL_SIZE"                   = "Total size:";
+"DISK_USED_SIZE"                    = "Used space:";
+"DISK_AVAILABLE_SIZE"               = "Available:";
+"DISK_RESERVED_SIZE"                = "Super user:";
+
+"NETWORK_TRAFFIC_TOTAL"             = "Total amount of transmitted data";
+"NETWORK_TRAFFIC_GAGING"            = "Transferred since:";
+"NETWORK_TRAFFIC_RX"                = "Received:";
+"NETWORK_TRAFFIC_TX"                = "Transmitted:";
+
+"BYTES" = "byte";
+"KB"    = "KB";
+"MB"    = "MB";
+"GB"    = "GB";
+"TB"    = "TB";
+
+"ALERT_TITLE_CONFIRMATION"          = "Confirm";
+"ALERT_TITLE_WARNING"               = "Warning";
+"ALERT_TITLE_ERROR"                 = "Error";
+"ALERT_BUTTON_CANCEL"               = "Cancel";
+"ALERT_BUTTON_OK"                   = "OK";
+"ALERT_BUTTON_NO"                   = "No";
+"ALERT_BUTTON_YES"                  = "Yes";
+"ALERT_BUTTON_IGNORE"               = "Skip it";
+"ALERT_BUTTON_RECONNECT"            = "Reconnect";
+
+"ALERT_DELETE_SERVER_MESSAGE"       = "Delete record for «%@»?";
+
+"ALERT_BAD_DNS_NAME"                = "«%@» has invalid DNS name %@. Should be a hostname or IP address.";
+
+"ALERT_SOCKET_READ_TIMED_OUT"       = "Connection with «%@» has been lost due to data read timeout. Re-establish connection?";
+
+"ALERT_CONNECT_TIMED_OUT"           = "Connection to «%@» cannot be established: connection timed out.";
+
+"ALERT_CONNECTION_REFUSED"          = "Connection to «%@» cannot be established: connection refused by server.";
+
+"ALERT_NO_ROUTE_TO_HOST"            = "Connection to «%@» using DNS name %@ cannot be established: no route to host.";
+
+"ALERT_OTHER_SOCKET_ERROR"          = "Cannot connect to «%@» using DNS name %@ and port number %d.";
+
+"ALERT_CONNECTION_LOST"             = "Connection with «%@» has been lost. Should Spectator re-establish connection?";
+
+"ALERT_SERVER_ERROR"                = "Connection with «%@» has been cancelled by Spectator due to some GKrellM error on a server side. Please, check GKrellM settings on «%@».";

@@ -1,0 +1,97 @@
+/******************************************************************************/
+/*                                                                            */
+/*  Spectator                                                                 */
+/*                                                                            */
+/*  Copyright (c) 2014 Meine Werke. All rights reserved.                      */
+/*                                                                            */
+/******************************************************************************/
+
+"SERVER_LIST_TITLE"                 = "Computers";
+"INTRODUCTION_BUTTON"               = "Introductie";
+"ADD_SERVER_BUTTON"                 = "Toevoegen";
+"SETTINGS"                          = "Instellingen";
+
+"INTRODUCTION_PAGE_TITLE"           = "«Spectator»";
+"INTRODUCTION_BACK_BUTTON"          = "Terug";
+
+"SERVER_EDIT_FORM_TITLE"            = "Computer";
+"SERVER_EDIT_CANCEL_BUTTON"         = "Verlaten";
+"SERVER_EDIT_SUBMIT_BUTTON"         = "Accepteren";
+
+"SERVER_EDIT_SERVER_NAME_HELP"      = "U kunt een computer een associatieve naam te geven, bij voorbeeld «Hoofdserver», «Databaseserver», «Kantoorserver», «Laptop van Emil» ...";
+"SERVER_EDIT_SERVER_NAME_LABEL"     = "Computernaam:";
+
+"SERVER_EDIT_DNS_NAME_HELP"         = "DNS-naam is ofwel een hostnaam of IP-adres (IPv4 en IPv6 worden ondersteund).";
+"SERVER_EDIT_DNS_NAME_LABEL"        = "DNS-naam:";
+
+"SERVER_EDIT_PORT_NUMBER_HELP"      = "Gkrellm poortnummer op een computer (standaard: 19150).";
+"SERVER_EDIT_PORT_NUMBER_LABEL"     = "Poortnummer:";
+
+"UPTIME_PREFIX"                     = "Lopend";
+"UPTIME_DAYS"                       = "dag(en)";
+
+"TAB_NAME_CPU"                      = "Processors";
+"TAB_NAME_MOUNTS"                   = "Schijven";
+"TAB_NAME_NETWORK"                  = "Netwerk";
+"TAB_NAME_CONNECTIONS"              = "Verbindingen";
+
+"CPU_USAGE_SUMMARY_GRAPH"           = "CPU overzicht";
+"CPU_USAGE_PER_UNIT"                = "CPU gebruik per eenheid";
+"CPU_USAGE_USER"                    = "User:";
+"CPU_USAGE_SYSTEM"                  = "System:";
+"CPU_USAGE_NICE"                    = "Nice:";
+"CPU_USAGE_IDLE"                    = "Idle:";
+
+"MEMORY_USAGE_PANEL"                = "Hoofdgeheugen";
+"MEMORY_BUFFERS"                    = "Buffers:";
+"MEMORY_CACHED"                     = "Cached:";
+"MEMORY_USED"                       = "Gebruikt:";
+"MEMORY_FREE"                       = "Vrij:";
+
+"SWAP_USAGE_PANEL"                  = "Swap";
+"SWAP_USED"                         = "Gebruikt:";
+"SWAP_FREE"                         = "Vrij:";
+
+"DISK_TOTAL_SIZE"                   = "Totale capaciteit:";
+"DISK_USED_SIZE"                    = "Gebruikt:";
+"DISK_AVAILABLE_SIZE"               = "Beschikbaar:";
+"DISK_RESERVED_SIZE"                = "Super user:";
+
+"NETWORK_TRAFFIC_TOTAL"             = "Totale hoeveelheid verzonden data";
+"NETWORK_TRAFFIC_GAGING"            = "Het overzetten sinds:";
+"NETWORK_TRAFFIC_RX"                = "Empfangen:";
+"NETWORK_TRAFFIC_TX"                = "Overgedragen:";
+
+"BYTES" = "byte";
+"KB"    = "KB";
+"MB"    = "MB";
+"GB"    = "GB";
+"TB"    = "TB";
+
+"ALERT_TITLE_CONFIRMATION"          = "Bevestigen";
+"ALERT_TITLE_WARNING"               = "Waarschuwing";
+"ALERT_TITLE_ERROR"                 = "Fout";
+"ALERT_BUTTON_CANCEL"               = "Afbreken";
+"ALERT_BUTTON_OK"                   = "OK";
+"ALERT_BUTTON_NO"                   = "Geen";
+"ALERT_BUTTON_YES"                  = "Ja";
+"ALERT_BUTTON_IGNORE"               = "Negeren";
+"ALERT_BUTTON_RECONNECT"            = "Aansluiten";
+
+"ALERT_DELETE_SERVER_MESSAGE"       = "Vermelding voor «%@» wilt verwijderen?";
+
+"ALERT_BAD_DNS_NAME"                = "«%@» heeft een ongeldige DNS-naam %@. Moet een hostnaam of IP-adres (IPv4 en IPv6 worden ondersteund).";
+
+"ALERT_SOCKET_READ_TIMED_OUT"       = "Verbinding met «%@» is vanwege timeout verloren gegaan. Verbinding opnieuw hestellen?";
+
+"ALERT_CONNECT_TIMED_OUT"           = "Kan niet met «%@» aansluiten: connection timeout.";
+
+"ALERT_CONNECTION_REFUSED"          = "Kan niet met «%@» aansluiten: verbinding door server geweigerd.";
+
+"ALERT_NO_ROUTE_TO_HOST"            = "Kan niet met «%@» onder DNS-naam %@ aansluiten: geen route naar host.";
+
+"ALERT_OTHER_SOCKET_ERROR"          = "Kan niet aansluiten met «%@» onder DNS-naam %@ en het poortnummer %d.";
+
+"ALERT_CONNECTION_LOST"             = "Verbinding met «%@» is verbroken. Verbinding opnieuw hestellen?";
+
+"ALERT_SERVER_ERROR"                = "Aansluiting met «%@» is afgebroken als gevolg van een GKrellM fout van de kant server. Tevreden, controle GKrellM instellingen op «%@».";
