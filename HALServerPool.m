@@ -21,6 +21,8 @@
     return pool;
 }
 
+#pragma mark Object cunstructors/destructors
+
 - (id)init
 {
     self = [super init];
@@ -61,6 +63,8 @@
     return self;
 }
 
+#pragma mark Server list
+
 - (void)saveServerList
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -95,12 +99,20 @@
     }
 }
 
+#pragma mark Events
+
 - (void)prepareForBackground
 {
     for (HALServer *server in self.servers)
     {
         [server pauseMonitoring];
     }
+}
+
+- (void)serverSatusChanged:(NSObject *)server
+{
+    if (self.delegate != nil)
+        [self.delegate serverSatusChanged:server];
 }
 
 @end

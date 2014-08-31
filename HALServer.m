@@ -5,6 +5,7 @@
 //
 
 #import "HALServer.h"
+#import "HALServerPool.h"
 
 typedef enum {
     HALNotReceiving,
@@ -15,6 +16,7 @@ typedef enum {
     HALIntroductionMemory,
     HALIntroductionNetSetup,
     HALIntroductionReconnectTimeout,
+    HALIntroductionSensors,
     HALIntroductionSwap,
     HALIntroductionSystemName,
     HALIntroductionUptime,
@@ -27,6 +29,7 @@ typedef enum {
     HALReceivingMounts,
     HALReceivingNet,
     HALReceivingProc,
+    HALReceivingSensors,
     HALReceivingSwap,
     HALReceivingUptime
 } HALReceivingDataType;
@@ -48,6 +51,8 @@ typedef enum {
 @synthesize serverName = _serverName;
 @synthesize dnsName = _dnsName;
 @synthesize portNumber = _portNumber;
+
+#pragma mark Object cunstructors/destructors
 
 - (id)initWithName:(NSString *)serverName
            dnsName:(NSString *)dnsName
@@ -134,13 +139,15 @@ typedef enum {
     [encoder encodeInt:self.portNumber forKey:@"PortNumber"];
 }
 
+#pragma mark Set/change server parameters
+
 - (void)setServerName:(NSString *)serverName
 {
     if ([serverName compare:_serverName] != NSOrderedSame) {
         _serverName = serverName;
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ServerParameterChanged"
-                                                            object:self];
+        if (self.connectionDelegate != nil)
+            [self.connectionDelegate serverParameterChanged];
     }
 }
 
@@ -149,8 +156,8 @@ typedef enum {
     if ([dnsName compare:_dnsName] != NSOrderedSame) {
         _dnsName = dnsName;
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ServerParameterChanged"
-                                                            object:self];
+        if (self.connectionDelegate != nil)
+            [self.connectionDelegate serverParameterChanged];
     }
 }
 
@@ -159,10 +166,12 @@ typedef enum {
     if (portNumber != _portNumber) {
         _portNumber = portNumber;
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ServerParameterChanged"
-                                                            object:self];
+        if (self.connectionDelegate != nil)
+            [self.connectionDelegate serverParameterChanged];
     }
 }
+
+#pragma mark Monitoring
 
 - (Boolean)monitoringRunning
 {
@@ -190,6 +199,8 @@ typedef enum {
 {
     [self disconnect];
 }
+
+#pragma mark Connection
 
 - (void)connect
 {
@@ -250,9 +261,6 @@ didConnectToHost:(NSString *)host
     NSLog(@"Connected");
 #endif
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectedToServer"
-                                                        object:self];
-    
     NSString *requestString = @"gkrellm 2.3.5\r\n";
 	NSData *requestData = [requestString dataUsingEncoding:NSUTF8StringEncoding];
 	
@@ -268,6 +276,11 @@ didConnectToHost:(NSString *)host
     [self.mountsRecorder serverDidConnect];
     [self.networkRecorder serverDidConnect];
     [self.connections serverDidConnect];
+
+    if (self.connectionDelegate != nil)
+        [self.connectionDelegate connectedToServer];
+
+    [[HALServerPool sharedServerPool] serverSatusChanged:self];
 }
 
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock
@@ -286,9 +299,6 @@ didConnectToHost:(NSString *)host
     [self.networkRecorder serverDidDisconnect];
     [self.connections serverDidDisconnect];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DisconnectedFromServer"
-                                                        object:self];
-    
     //if (!forcedDisconnect)
     if (error.code != GCDAsyncSocketNoError)
         [self alertSocketError:error.code];
@@ -298,7 +308,14 @@ didConnectToHost:(NSString *)host
                afterDelay:1.0f];*/
     
     forcedDisconnect = NO;
+
+    if (self.connectionDelegate != nil)
+        [self.connectionDelegate disconnectedFromServer];
+
+    [[HALServerPool sharedServerPool] serverSatusChanged:self];
 }
+
+#pragma mark Network communication
 
 - (void)socket:(GCDAsyncSocket *)sock
    didReadData:(NSData *)data
@@ -321,6 +338,8 @@ didConnectToHost:(NSString *)host
     
     [socket readDataToData:[GCDAsyncSocket LFData] withTimeout:self.connectionTimeout tag:0];
 }
+
+#pragma mark Parse input information
 
 - (void)processIntroduction:(NSString *)response
 {
@@ -359,14 +378,16 @@ didConnectToHost:(NSString *)host
         } else if ([response compare:@"<monitors>"] == NSOrderedSame) {
             receivingDataType = HALNotReceiving;
         } else if ([response compare:@"<sensors_setup>"] == NSOrderedSame) {
-            receivingDataType = HALNotReceiving;
+            receivingDataType = HALIntroductionSensors;
         } else if ([response compare:@"<swap>"] == NSOrderedSame) {
             receivingDataType = HALIntroductionSwap;
         } else if ([response compare:@"<time>"] == NSOrderedSame) {
             receivingDataType = HALNotReceiving;
         } else {
             receivingDataType = HALNotReceiving;
+#ifdef DEBUG
             NSLog(@"Unknown token: %@", response);
+#endif
         }
     } else {
         [self commitIntroductionLine:response];
@@ -400,6 +421,12 @@ didConnectToHost:(NSString *)host
             self.serverToldReconnectTimeout = [line floatValue];
             break;
 
+        case HALIntroductionSensors:
+#ifdef DEBUG
+            NSLog(@"%@", line);
+#endif
+            break;
+
         case HALIntroductionSwap:
             [self.swapRecorder parseLine:line];
             break;
@@ -425,8 +452,8 @@ didConnectToHost:(NSString *)host
 {
     if ([response characterAtIndex:0] == '<') {
         if ([response characterAtIndex:1] == '.') {
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"Clock"
-                                                                object:self];
+            if ((self.monitoringDelegate != nil) && [self.monitoringDelegate respondsToSelector:@selector(clock)])
+                [self.monitoringDelegate clock];
         } else if ([response compare:@"<cpu>"] == NSOrderedSame) {
             [self.processorsRecorder nextRecord];
             receivingDataType = HALReceivingCPU;
@@ -447,13 +474,17 @@ didConnectToHost:(NSString *)host
             receivingDataType = HALReceivingNet;
         } else if ([response compare:@"<proc>"] == NSOrderedSame) {
             receivingDataType = HALReceivingProc;
+        } else if ([response compare:@"<sensors>"] == NSOrderedSame) {
+            receivingDataType = HALReceivingSensors;
         } else if ([response compare:@"<swap>"] == NSOrderedSame) {
             receivingDataType = HALReceivingSwap;
         } else if ([response compare:@"<uptime>"] == NSOrderedSame) {
             receivingDataType = HALReceivingUptime;
         } else {
             receivingDataType = HALNotReceiving;
-            //NSLog(@"Unknown token: %@", response);
+#ifdef DEBUG
+            NSLog(@"Unknown token: %@", response);
+#endif
         }
     } else {
         [self processDataLine:response];
@@ -489,7 +520,13 @@ didConnectToHost:(NSString *)host
             
         case HALReceivingProc:
             break;
-            
+
+        case HALReceivingSensors:
+#ifdef DEBUG
+            NSLog(@"%@", line);
+#endif
+            break;
+
         case HALReceivingSwap:
             [self.swapRecorder parseLine:line];
             break;
@@ -512,9 +549,11 @@ didConnectToHost:(NSString *)host
     [scanner scanInteger:&uptime];
     self.serverUptime = uptime;
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ServerUptimeReported"
-                                                        object:self];
+    if ((self.monitoringDelegate != nil) && [self.monitoringDelegate respondsToSelector:@selector(serverUptimeReported)])
+        [self.monitoringDelegate serverUptimeReported];
 }
+
+#pragma mark Error messages
 
 - (void)alertSocketError:(NSInteger)errorCode
 {

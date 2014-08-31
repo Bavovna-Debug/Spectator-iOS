@@ -6,6 +6,8 @@
 
 #import "HALResourceRecorder.h"
 
+@protocol HALProcessorsRecorderDelegate;
+
 @interface HALProcessorsRecorder : HALResourceRecorder
 
 @property (assign, nonatomic) NSUInteger numberOfProcessors;
@@ -21,5 +23,13 @@
 - (void)parseLine:(NSString *)line;
 
 - (void)recalculateRange;
+
+@end
+
+@protocol HALProcessorsRecorderDelegate <NSObject>
+
+@required
+
+- (void)clockProcessor;
 
 @end

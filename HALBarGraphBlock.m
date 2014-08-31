@@ -10,6 +10,7 @@
 
 - (id)initWithFrame:(CGRect)frame
               color:(UIColor *)color
+              alpha:(CGFloat)alpha
 {
     self = [super initWithFrame:frame];
     if (self == nil)
@@ -18,6 +19,7 @@
     self.value = 0.0f;
 
     [self setBackgroundColor:color];
+    [self setAlpha:alpha];
 
     return self;
 }

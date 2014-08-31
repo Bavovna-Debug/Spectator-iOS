@@ -11,8 +11,9 @@
 #import "HALMonitorViewController.h"
 #import "HALMountsViewController.h"
 #import "HALNetworkViewController.h"
+#import "HALServer.h"
 
-@interface HALMonitorTabBarController ()
+@interface HALMonitorTabBarController () <HALServerConnectionDelegate>
 
 @property (weak, nonatomic) HALServer *server;
 @property (strong, nonatomic) UINavigationItem *navigationItem2;
@@ -199,15 +200,6 @@
                          action:@selector(didTouchPauseButton)
                forControlEvents:UIControlEventTouchUpInside];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"ConnectedToServer"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"DisconnectedFromServer"
-                                               object:nil];
-    
     [self updateButtonsStates];
 
     return buttonsView;
@@ -222,18 +214,26 @@
 
         for (HALMonitorViewController *controller in [self viewControllers])
             [controller setServer:server];
-        
+
+        [server setConnectionDelegate:self];
+
         [self updateButtonsStates];
     }
 }
 
-- (void)serverStatusDidChange:(NSNotification *)note
+- (void)connectedToServer
 {
-    HALServer *serverThatDidChange = note.object;
-    
-    if (serverThatDidChange == self.server) {
-        [self updateButtonsStates];
-    }
+    [self updateButtonsStates];
+}
+
+- (void)disconnectedFromServer
+{
+    [self updateButtonsStates];
+}
+
+- (void)serverParameterChanged
+{
+    [self updateButtonsStates];
 }
 
 - (void)updateButtonsStates

@@ -6,6 +6,7 @@
 
 #import "HALMonitorViewController.h"
 
-@interface HALNetworkViewController : HALMonitorViewController <UITableViewDataSource, UITableViewDelegate>
+@interface HALNetworkViewController : HALMonitorViewController
+    <UITableViewDataSource, UITableViewDelegate>
 
 @end

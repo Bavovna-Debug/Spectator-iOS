@@ -8,6 +8,8 @@
 
 @implementation HALResourceRecorder
 
+#pragma mark Virtual methods
+
 - (void)serverDidConnect { }
 
 - (void)serverDidDisconnect { }

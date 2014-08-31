@@ -20,8 +20,7 @@ typedef enum
 @property (strong, nonatomic) NSMutableArray *blocks;
 
 - (id)initWithFrame:(CGRect)frame
-          graphType:(HALBarGraphType)graphType
-       defaultColor:(UIColor *)defaultColor;
+          graphType:(HALBarGraphType)graphType;
 
 - (HALBarGraphBlock *)addBlockWithColor:(UIColor *)blockColor;
 

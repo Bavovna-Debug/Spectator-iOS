@@ -8,6 +8,8 @@
 
 @implementation HALProcessorUsageRecord
 
+#pragma mark Object cunstructors/destructors
+
 - (id)init
 {
     self = [super init];
@@ -45,6 +47,8 @@
     
     return self;
 }
+
+#pragma mark Class specific
 
 - (void)addUserTime:(UInt64)userTime
            niceTime:(UInt64)niceTime

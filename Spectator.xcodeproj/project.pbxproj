@@ -80,6 +80,14 @@
 		94536FE4190FBEB300960E5F /* HALCpuGraphPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FE2190FBEB300960E5F /* HALCpuGraphPanel.m */; };
 		9454AD8E18F014860046A2E9 /* HALProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */; };
 		9454AD8F18F029B60046A2E9 /* HALProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */; };
+		945ECB8B19A383C20097DC0A /* BarGraphPanelPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */; };
+		945ECB8C19A383C20097DC0A /* BarGraphPanelPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */; };
+		945ECB8D19A383C20097DC0A /* BarGraphPanelPod.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8A19A383C20097DC0A /* BarGraphPanelPod.png */; };
+		945ECB8E19A383C20097DC0A /* BarGraphPanelPod.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8A19A383C20097DC0A /* BarGraphPanelPod.png */; };
+		945ECB9019A48B540097DC0A /* BarGraphPanelPod@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8F19A48B540097DC0A /* BarGraphPanelPod@2x.png */; };
+		945ECB9119A48B540097DC0A /* BarGraphPanelPod@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8F19A48B540097DC0A /* BarGraphPanelPod@2x.png */; };
+		945ECB9319A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */; };
+		945ECB9419A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */; };
 		94613834190FDD12006F18DA /* CPUGraphBackgroundPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94613832190FDD12006F18DA /* CPUGraphBackgroundPad.png */; };
 		94613835190FDD12006F18DA /* CPUGraphBackgroundPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 94613833190FDD12006F18DA /* CPUGraphBackgroundPhone.png */; };
 		9461383819111E7F006F18DA /* HALPanelTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383719111E7F006F18DA /* HALPanelTableView.m */; };
@@ -262,6 +270,10 @@
 		945D5BB119045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		945D5BB219045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		945D5BB319045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarGraphPanelPad.png; path = ../Images/BarGraph/BarGraphPanelPad.png; sourceTree = "<group>"; };
+		945ECB8A19A383C20097DC0A /* BarGraphPanelPod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BarGraphPanelPod.png; path = ../Images/BarGraph/BarGraphPanelPod.png; sourceTree = "<group>"; };
+		945ECB8F19A48B540097DC0A /* BarGraphPanelPod@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarGraphPanelPod@2x.png"; path = "../Images/BarGraph/BarGraphPanelPod@2x.png"; sourceTree = "<group>"; };
+		945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarGraphPanelPad@2x.png"; path = "../Images/BarGraph/BarGraphPanelPad@2x.png"; sourceTree = "<group>"; };
 		94613832190FDD12006F18DA /* CPUGraphBackgroundPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CPUGraphBackgroundPad.png; path = ../Images/CPU/CPUGraphBackgroundPad.png; sourceTree = "<group>"; };
 		94613833190FDD12006F18DA /* CPUGraphBackgroundPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CPUGraphBackgroundPhone.png; path = ../Images/CPU/CPUGraphBackgroundPhone.png; sourceTree = "<group>"; };
 		9461383619111E7F006F18DA /* HALPanelTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALPanelTableView.h; sourceTree = "<group>"; };
@@ -568,6 +580,7 @@
 		944EF25C18EC6BB20047E519 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				945ECB8519A371C60097DC0A /* BarGraph */,
 				948D85EC18F3087800DDDB5A /* CircleGraph */,
 				94D856EF18FC26CB0097C385 /* CPU */,
 				94AD97BD18EEAAEB0001C695 /* InetConnections */,
@@ -657,6 +670,17 @@
 				94D6EED018EE77F200740F04 /* HALConnectionsTableCell.m */,
 			);
 			name = Connections;
+			sourceTree = "<group>";
+		};
+		945ECB8519A371C60097DC0A /* BarGraph */ = {
+			isa = PBXGroup;
+			children = (
+				945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */,
+				945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */,
+				945ECB8A19A383C20097DC0A /* BarGraphPanelPod.png */,
+				945ECB8F19A48B540097DC0A /* BarGraphPanelPod@2x.png */,
+			);
+			name = BarGraph;
 			sourceTree = "<group>";
 		};
 		948D85EC18F3087800DDDB5A /* CircleGraph */ = {
@@ -881,6 +905,7 @@
 				9486E58C1900383700E174C5 /* NavBarButton-Start@2x.png in Resources */,
 				9486E598190068CB00E174C5 /* NavBarButton-Back@2x.png in Resources */,
 				9486E575190026A200E174C5 /* TabBarButton-Mounts.png in Resources */,
+				945ECB9019A48B540097DC0A /* BarGraphPanelPod@2x.png in Resources */,
 				9486E5B41901853E00E174C5 /* TabBarButton-Network.png in Resources */,
 				94613835190FDD12006F18DA /* CPUGraphBackgroundPhone.png in Resources */,
 				9486E596190068CB00E174C5 /* NavBarButton-Back.png in Resources */,
@@ -888,6 +913,7 @@
 				94613834190FDD12006F18DA /* CPUGraphBackgroundPad.png in Resources */,
 				94175D1018F6DAD800DB14B7 /* CircleGraphLayer.png in Resources */,
 				9486E59219003A6900E174C5 /* NavBarButton-Stop@2x.png in Resources */,
+				945ECB8D19A383C20097DC0A /* BarGraphPanelPod.png in Resources */,
 				9486E59019003A6900E174C5 /* NavBarButton-Stop.png in Resources */,
 				9486E5711900094300E174C5 /* TabBarButton-CPU@2x.png in Resources */,
 				944FD5111901CB9100B16C60 /* ServerList-AccessoryButton@2x.png in Resources */,
@@ -903,8 +929,10 @@
 				9486E587190037D900E174C5 /* NavBarButton-Start.png in Resources */,
 				940A202D18EBD89C00620F45 /* Localizable.strings in Resources */,
 				94AD97C018EEAAFA0001C695 /* InetConnectionAppeared.png in Resources */,
+				945ECB9319A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */,
 				943BAB8618EBE7AA00A44CBD /* Spectator-Info.plist in Resources */,
 				9486E57B1900295600E174C5 /* TabBarButton-Connections.png in Resources */,
+				945ECB8B19A383C20097DC0A /* BarGraphPanelPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,13 +948,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945ECB9419A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */,
 				9486E5841900361C00E174C5 /* NavBarButton-Pause@2x.png in Resources */,
+				945ECB8E19A383C20097DC0A /* BarGraphPanelPod.png in Resources */,
 				9486E5B51901853E00E174C5 /* TabBarButton-Network.png in Resources */,
+				945ECB9119A48B540097DC0A /* BarGraphPanelPod@2x.png in Resources */,
 				9486E57E1900295600E174C5 /* TabBarButton-Connections@2x.png in Resources */,
 				9486E5721900094300E174C5 /* TabBarButton-CPU@2x.png in Resources */,
 				9486E59319003A6900E174C5 /* NavBarButton-Stop@2x.png in Resources */,
 				944FD5061901CAB600B16C60 /* ActionButton-Delete.png in Resources */,
 				9486E588190037D900E174C5 /* NavBarButton-Start.png in Resources */,
+				945ECB8C19A383C20097DC0A /* BarGraphPanelPad.png in Resources */,
 				944FD5161901CDF900B16C60 /* Network-StartGaging.png in Resources */,
 				9486E56D190008BA00E174C5 /* TabBarButton-CPU.png in Resources */,
 				944EF25518EC6B420047E519 /* Localizable.strings in Resources */,

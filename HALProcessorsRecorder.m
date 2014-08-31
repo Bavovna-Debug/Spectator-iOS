@@ -17,6 +17,8 @@
 
 @implementation HALProcessorsRecorder
 
+#pragma mark Object cunstructors/destructors
+
 - (id)initWithServer:(HALServer *)server
 {
     self = [super init];
@@ -30,6 +32,8 @@
     return self;
 }
 
+#pragma mark Virtual methods
+
 - (void)resetData
 {
     [super resetData];
@@ -40,6 +44,8 @@
     
     self.currentRecord = [NSMutableArray array];
 }
+
+#pragma mark Parse input information
 
 - (void)parseIntroductionLine:(NSString *)line;
 {
@@ -74,9 +80,9 @@
 
         if ([self.history count] < 40)
             [self recalculateRange];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ClockProcessor"
-                                                            object:self.server];
+
+        if (self.delegate != nil)
+            [self.delegate clockProcessor];
     }
 
     self.currentRecord = [NSMutableArray array];
@@ -121,6 +127,8 @@
 
     [self.currentRecord insertObject:processorRecord atIndex:processorId];
 }
+
+#pragma mark Class specific
 
 - (void)recalculateRange
 {

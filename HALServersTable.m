@@ -11,7 +11,13 @@
 #import "HALServersTable.h"
 #import "HALServersTableCell.h"
 
+@interface HALServersTable () <HALServerPoolDelegate>
+
+@end
+
 @implementation HALServersTable
+
+#pragma mark UI initialization
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,8 +36,12 @@
         self.separatorInset = UIEdgeInsetsZero;
     self.separatorColor = [UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f];
 
+    [[HALServerPool sharedServerPool] setDelegate:self];
+
     return self;
 }
+
+#pragma mark UITableView delegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
@@ -66,6 +76,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     
     HALApplicationDelegate *application = (HALApplicationDelegate *)[[UIApplication sharedApplication] delegate];
     [application switchToServer:server];
+}
+
+#pragma mark Class specific
+
+- (void)serverSatusChanged:(NSObject *)server
+{
+    [self reloadData];
 }
 
 @end

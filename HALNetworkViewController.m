@@ -6,11 +6,13 @@
 
 #import "HALNetworkInterfacePanel.h"
 #import "HALNetworkInterface.h"
+#import "HALNetworkRecorder.h"
 #import "HALNetworkViewController.h"
 #import "HALPanelTableView.h"
 #import "HALPanelTableViewCell.h"
 
 @interface HALNetworkViewController ()
+    <HALNetworkRecorderDelegate>
 
 @property (strong, nonatomic) HALPanelTableView *tableView;
 @property (nonatomic, strong) NSTimer *stopwatchTimer;
@@ -36,21 +38,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(networkInterfacesReset:)
-                                                 name:@"NetworkInterfacesReset"
-                                               object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(networkInterfaceDetected:)
-                                                 name:@"NetworkInterfaceDetected"
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(networkTrafficChanged:)
-                                                 name:@"NetworkTrafficChanged"
-                                               object:nil];
+    [[self.server networkRecorder] setDelegate:self];
 
     self.stopwatchTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f
                                                            target:self
@@ -62,17 +51,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"NetworkInterfacesReset"
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"NetworkInterfaceDetected"
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"NetworkTrafficChanged"
-                                                  object:nil];
+    [[self.server networkRecorder] setDelegate:nil];
 
     [self.stopwatchTimer invalidate];
     self.stopwatchTimer = nil;
@@ -80,20 +59,18 @@
     [super viewDidDisappear:animated];
 }
 
-- (void)networkInterfacesReset:(NSNotification *)note
+- (void)networkInterfacesReset
 {
     [self.tableView reloadData];
 }
 
-- (void)networkInterfaceDetected:(NSNotification *)note
+- (void)networkInterfaceDetected:(HALNetworkInterface *)interface
 {
     [self.tableView reloadData];
 }
 
-- (void)networkTrafficChanged:(NSNotification *)note
+- (void)networkTrafficChanged:(HALNetworkInterface *)interface
 {
-    HALNetworkInterface *interface = note.object;
-    
     for (int section = 0; section < [self.tableView numberOfSections]; section++)
     {
         for (int row = 0; row < [self.tableView numberOfRowsInSection:section]; row++)

@@ -10,6 +10,8 @@
 
 @synthesize gaging = _gaging;
 
+#pragma mark Object cunstructors/destructors
+
 - (id)initWithInterfaceName:(NSString *)interfaceName
                rxBytesTotal:(UInt64)rxBytesTotal
                txBytesTotal:(UInt64)txBytesTotal
@@ -26,6 +28,8 @@
     
     return self;
 }
+
+#pragma mark Class specific
 
 - (void)trafficRxBytes:(UInt64)rxBytes
                txBytes:(UInt64)txBytes

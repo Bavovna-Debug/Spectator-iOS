@@ -4,7 +4,6 @@
 //  Copyright (c) 2014 Meine Werke. All rights reserved.
 //
 
-#import "HALNetworkInterface.h"
 #import "HALNetworkRecorder.h"
 #import "HALServer.h"
 
@@ -15,6 +14,8 @@
 @end
 
 @implementation HALNetworkRecorder
+
+#pragma mark Object cunstructors/destructors
 
 - (id)initWithServer:(HALServer *)server
 {
@@ -29,23 +30,27 @@
     return self;
 }
 
+#pragma mark Virtual methods
+
 - (void)resetData
 {
     [super resetData];
 
     self.interfaces = [NSMutableArray array];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NetworkInterfacesReset"
-                                                        object:self.server];
+    if (self.delegate != nil)
+        [self.delegate networkInterfacesReset];
 }
 
 - (void)serverDidConnect
 {
     [super serverDidConnect];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NetworkInterfacesReset"
-                                                        object:self.server];
+    if (self.delegate != nil)
+        [self.delegate networkInterfacesReset];
 }
+
+#pragma mark Parse input information
 
 - (void)parseLine:(NSString *)line
 {
@@ -73,9 +78,10 @@
         {
             [interface trafficRxBytes:rxBytes
                               txBytes:txBytes];
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"NetworkTrafficChanged"
-                                                                object:interface];
+
+            if (self.delegate != nil)
+                [self.delegate networkTrafficChanged:interface];
+
             found = YES;
             break;
         }
@@ -88,8 +94,8 @@
                                                                                txBytesTotal:txBytes];
         [self.interfaces addObject:interface];
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NetworkInterfaceDetected"
-                                                            object:interface];
+        if (self.delegate != nil)
+            [self.delegate networkInterfaceDetected:interface];
     }
 }
 

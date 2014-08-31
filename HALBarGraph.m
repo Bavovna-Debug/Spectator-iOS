@@ -9,18 +9,15 @@
 @interface HALBarGraph ()
 
 @property (assign, nonatomic) HALBarGraphType graphType;
+@property (assign, nonatomic) CGRect graphFrame;
 @property (strong, nonatomic) UIView *defaultBlock;
 
 @end
 
 @implementation HALBarGraph
-{
-    CGSize padding;
-}
 
 - (id)initWithFrame:(CGRect)frame
           graphType:(HALBarGraphType)graphType
-       defaultColor:(UIColor *)defaultColor
 {
     self = [super initWithFrame:frame];
     if (self == nil)
@@ -29,50 +26,92 @@
     self.blocks = [NSMutableArray array];
     self.graphType = graphType;
 
-    [self setBackgroundColor:[UIColor blackColor]];
-    
-    padding = CGSizeMake(2, 2);
-    
-    CGRect blockFrame = CGRectMake(padding.width - 1,
-                                   padding.height - 1,
-                                   CGRectGetWidth(frame) - (padding.width - 1) * 2,
-                                   CGRectGetHeight(frame) - (padding.height - 1) * 2);
-    
-    self.defaultBlock = [[UIView alloc] initWithFrame:blockFrame];
-    [self.defaultBlock setBackgroundColor:defaultColor];
-    [self.layer setCornerRadius:2.0f];
-    [self addSubview:self.defaultBlock];
-    
+    switch (self.graphType)
+    {
+        case HALBarGraphHorizontal:
+            self.graphFrame = CGRectInset([self bounds], 4.0f, 4.5f);
+            break;
+
+        case HALBarGraphVertical:
+            self.graphFrame = CGRectInset([self bounds], 1, 1);
+            break;
+    }
+
+    switch (self.graphType)
+    {
+        case HALBarGraphHorizontal:
+        {
+            [self setBackgroundColor:[UIColor clearColor]];
+
+            UIImage *backgroundImage;
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+                backgroundImage = [UIImage imageNamed:@"BarGraphPanelPad"];
+            } else {
+                backgroundImage = [UIImage imageNamed:@"BarGraphPanelPod"];
+            }
+            UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+
+            self.defaultBlock = [[UIView alloc] initWithFrame:self.graphFrame];
+            [self.defaultBlock setBackgroundColor:[UIColor clearColor]];
+            [self.defaultBlock.layer setCornerRadius:5.0f];
+
+            [self addSubview:backgroundView];
+            [self addSubview:self.defaultBlock];
+
+            break;
+        }
+
+        case HALBarGraphVertical:
+            [self setBackgroundColor:[UIColor blackColor]];
+
+            self.defaultBlock = [[UIView alloc] initWithFrame:self.graphFrame];
+            [self.defaultBlock setBackgroundColor:[UIColor blackColor]];
+
+            [self addSubview:self.defaultBlock];
+
+            [self.layer setCornerRadius:2.0f];
+
+            break;
+    }
+
     return self;
 }
 
 - (HALBarGraphBlock *)addBlockWithColor:(UIColor *)blockColor
 {
-    CGRect blockFrame;
-    
+    HALBarGraphBlock *block;
+
     switch (self.graphType)
     {
         case HALBarGraphHorizontal:
-            blockFrame = CGRectMake(1,
-                                    1,
-                                    0,
-                                    CGRectGetHeight([self.defaultBlock bounds]) - 2);
+        {
+            CGRect blockFrame = CGRectMake(0,
+                                           0,
+                                           0,
+                                           CGRectGetHeight(self.graphFrame));
+            block = [[HALBarGraphBlock alloc] initWithFrame:blockFrame
+                                                      color:blockColor
+                                                      alpha:0.75f];
             break;
+        }
 
         case HALBarGraphVertical:
-            blockFrame = CGRectMake(1,
-                                    CGRectGetHeight([self.defaultBlock bounds]) - 1,
-                                    CGRectGetWidth([self.defaultBlock bounds]) - 2,
-                                    0);
+        {
+            CGRect blockFrame = CGRectMake(1,
+                                           CGRectGetHeight(self.graphFrame) - 1,
+                                           CGRectGetWidth(self.graphFrame) - 2,
+                                           0);
+
+            block = [[HALBarGraphBlock alloc] initWithFrame:blockFrame
+                                                      color:blockColor
+                                                      alpha:1.0f];
             break;
+        }
     }
-    
-    HALBarGraphBlock *block = [[HALBarGraphBlock alloc] initWithFrame:blockFrame
-                                                                color:blockColor];
-    
+
     [self.defaultBlock addSubview:block];
     [self.blocks addObject:block];
-    
+
     return block;
 }
 
@@ -92,7 +131,6 @@
 
 - (void)refreshBlocks
 {
-    CGRect bounds = [self.defaultBlock bounds];
     CGRect blockFrame;
     CGFloat totalSize;
 
@@ -102,16 +140,16 @@
             blockFrame = CGRectMake(1,
                                     1,
                                     0,
-                                    CGRectGetHeight(bounds) - 2);
-            totalSize = CGRectGetWidth(bounds) - 2;
+                                    CGRectGetHeight(self.graphFrame) - 2);
+            totalSize = CGRectGetWidth(self.graphFrame) - 2;
             break;
 
         case HALBarGraphVertical:
             blockFrame = CGRectMake(1,
-                                    CGRectGetHeight(bounds) - 1,
-                                    CGRectGetWidth(bounds) - 2,
+                                    CGRectGetHeight(self.graphFrame) - 1,
+                                    CGRectGetWidth(self.graphFrame) - 2,
                                     0);
-            totalSize = CGRectGetHeight(bounds) - 2;
+            totalSize = CGRectGetHeight(self.graphFrame) - 2;
             break;
     }
 

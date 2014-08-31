@@ -15,6 +15,8 @@
 
 @implementation HALSwapRecorder
 
+#pragma mark Object cunstructors/destructors
+
 - (id)initWithServer:(HALServer *)server
 {
     self = [super init];
@@ -25,6 +27,8 @@
     
     return self;
 }
+
+#pragma mark Parse input information
 
 - (void)parseLine:(NSString *)line
 {
@@ -44,8 +48,8 @@
         self.total = total;
         self.used = used;
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"SwapInfoChanged"
-                                                            object:self.server];
+        if (self.delegate != nil)
+            [self.delegate swapInfoChanged];
     }
 }
 

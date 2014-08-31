@@ -32,8 +32,7 @@
           idleColor:(UIColor *)idleColor
 {
     self = [super initWithFrame:frame
-                      graphType:HALBarGraphVertical
-                   defaultColor:idleColor];
+                      graphType:HALBarGraphVertical];
     if (self == nil)
         return nil;
 

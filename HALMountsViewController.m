@@ -4,12 +4,14 @@
 //  Copyright (c) 2014 Meine Werke. All rights reserved.
 //
 
-#import "HALMountsViewController.h"
 #import "HALMountPanel.h"
+#import "HALMountsRecorder.h"
+#import "HALMountsViewController.h"
 #import "HALPanelTableView.h"
 #import "HALPanelTableViewCell.h"
 
 @interface HALMountsViewController ()
+    <HALMountsRecorderDelegate>
 
 @property (strong, nonatomic) HALPanelTableView *tableView;
 
@@ -46,50 +48,31 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(mountsDidReset:)
-                                                 name:@"MountsReset"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(mountDetected:)
-                                                 name:@"MountDetected"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(mountDidChange:)
-                                                 name:@"MountChanged"
-                                               object:nil];
+
+    [[self.server mountsRecorder] setDelegate:self];
+
     [self.tableView reloadData];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"MountsReset"
-                                                  object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"MountDetected"
-                                                  object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"MountChanged"
-                                                  object:nil];
+    [[self.server mountsRecorder] setDelegate:nil];
+
     [super viewDidDisappear:animated];
 }
 
-- (void)mountsDidReset:(NSNotification *)note
+- (void)mountsReset
 {
     [self.tableView reloadData];
 }
 
-- (void)mountDetected:(NSNotification *)note
+- (void)mountDetected:(HALMount *)mount
 {
     [self.tableView reloadData];
 }
 
-- (void)mountDidChange:(NSNotification *)note
+- (void)mountChanged:(HALMount *)mount
 {
-    HALMount *mount = note.object;
-    
     for (int section = 0; section < [self.tableView numberOfSections]; section++)
     {
         for (int row = 0; row < [self.tableView numberOfRowsInSection:section]; row++)

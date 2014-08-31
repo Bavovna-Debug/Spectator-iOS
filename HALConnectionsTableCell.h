@@ -10,9 +10,9 @@
 
 @interface HALConnectionsTableCell : UITableViewCell
 
-@property (strong, nonatomic) HALConnectionRecord *record;
+@property (strong, nonatomic) HALConnectionRecord *connection;
 
-- (id)initWithConnection:(HALConnectionRecord *)record;
+- (id)initWithConnection:(HALConnectionRecord *)connection;
 
 - (CGFloat)cellHeight;
 

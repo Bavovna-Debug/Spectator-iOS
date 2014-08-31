@@ -8,6 +8,8 @@
 
 @interface HALResourceRecorder : NSObject
 
+@property (nonatomic, strong, readwrite) id delegate;
+
 - (void)serverDidConnect;
 
 - (void)serverDidDisconnect;

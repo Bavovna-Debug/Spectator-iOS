@@ -8,16 +8,15 @@
 
 @implementation HALConnectionRecord
 
-- (id)initWithServer:(HALServer *)server
-                host:(NSString *)ipAddress
-          remotePort:(UInt16)remotePort
-           localPort:(UInt16)localPort
+#pragma mark Object cunstructors/destructors
+
+- (id)initWithIpAddress:(NSString *)ipAddress
+             remotePort:(UInt16)remotePort
+              localPort:(UInt16)localPort
 {
     self = [super init];
     if (self == nil)
         return nil;
-    
-    self.server = server;
 
     self.openedStamp = [NSDate date];
     self.closedStamp = nil;
@@ -28,6 +27,8 @@
     
     return self;
 }
+
+#pragma mark Class specific
 
 - (id)closed
 {

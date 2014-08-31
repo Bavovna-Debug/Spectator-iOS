@@ -5,7 +5,6 @@
 //
 
 #import "HALConnectionsRecorder.h"
-#import "HALConnectionRecord.h"
 #import "HALServer.h"
 
 @interface HALConnectionsRecorder ()
@@ -15,6 +14,8 @@
 @end
 
 @implementation HALConnectionsRecorder
+
+#pragma mark Object cunstructors/destructors
 
 - (id)initWithServer:(HALServer *)server
 {
@@ -28,6 +29,8 @@
     
     return self;
 }
+
+#pragma mark Virtual methods
 
 - (void)resetData
 {
@@ -44,9 +47,11 @@
     [self.closedConnections addObjectsFromArray:self.activeConnections];
     [self.activeConnections removeAllObjects];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveConnectionsCleared"
-                                                        object:self.server];
+    if (self.delegate != nil)
+        [self.delegate activeConnectionsCleared];
 }
+
+#pragma mark Parse input information
 
 - (void)parseLine:(NSString *)line
 {
@@ -87,27 +92,27 @@
     [scanner scanHexInt:&localPortNumber];
 
     if (operationCode == '+') {
-        HALConnectionRecord *activeConnection = [[HALConnectionRecord alloc] initWithServer:self.server
-                                                                                               host:remoteIpAddress
-                                                                                         remotePort:remotePortNumber
-                                                                                          localPort:localPortNumber];
+        HALConnectionRecord *connection = [[HALConnectionRecord alloc] initWithIpAddress:remoteIpAddress
+                                                                              remotePort:remotePortNumber
+                                                                               localPort:localPortNumber];
         //[activeConnection setRecordId:recordId++];
-        [self.activeConnections addObject:activeConnection];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveConnectionAppeared"
-                                                            object:activeConnection];
-    } else if (operationCode == '-') {
-        for (HALConnectionRecord *activeConnection in self.activeConnections)
-        {
-            if ((activeConnection.localPort == localPortNumber) &&
-                (activeConnection.remotePort == remotePortNumber) &&
-                ([activeConnection.ipAddress compare:remoteIpAddress] == NSOrderedSame))
-            {
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ActiveConnectionDisappeared"
-                                                                    object:activeConnection];
-                
-                HALConnectionRecord *closedConnection = [activeConnection closed];
+        [self.activeConnections addObject:connection];
 
-                [self.activeConnections removeObject:activeConnection];
+        if (self.delegate != nil)
+            [self.delegate activeConnectionAppeared:connection];
+    } else if (operationCode == '-') {
+        for (HALConnectionRecord *connection in self.activeConnections)
+        {
+            if ((connection.localPort == localPortNumber) &&
+                (connection.remotePort == remotePortNumber) &&
+                ([connection.ipAddress compare:remoteIpAddress] == NSOrderedSame))
+            {
+                if (self.delegate != nil)
+                    [self.delegate activeConnectionDisappeared:connection];
+
+                HALConnectionRecord *closedConnection = [connection closed];
+
+                [self.activeConnections removeObject:connection];
 
                 //[closedConnection setRecordId:recordId++];
                 

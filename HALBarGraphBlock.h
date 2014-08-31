@@ -11,6 +11,7 @@
 @property (assign, nonatomic) CGFloat value;
 
 - (id)initWithFrame:(CGRect)frame
-              color:(UIColor *)color;
+              color:(UIColor *)color
+              alpha:(CGFloat)alpha;
 
 @end

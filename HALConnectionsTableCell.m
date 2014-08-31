@@ -22,7 +22,7 @@
     Boolean expanded;
 }
 
-- (id)initWithConnection:(HALConnectionRecord *)record
+- (id)initWithConnection:(HALConnectionRecord *)connection
 {
     NSString *cellIdentifier = nil;    
     self = [super initWithStyle:UITableViewCellStyleDefault
@@ -32,7 +32,7 @@
     
     [self setBackgroundColor:[UIColor clearColor]];
 
-    self.record = record;
+    self.connection = connection;
  
     expanded = NO;
 
@@ -107,10 +107,10 @@
         timestampRect = CGRectOffset(hostNameRect, 0, cellSize.height);
     }
 
-    NSString *ipAddress = [record ipAddress];
-    UInt16 remotePort = [record remotePort];
-    UInt16 localPort = [record localPort];
-    NSString *timestampText = [NSDateFormatter localizedStringFromDate:[record openedStamp]
+    NSString *ipAddress = [connection ipAddress];
+    UInt16 remotePort = [connection remotePort];
+    UInt16 localPort = [connection localPort];
+    NSString *timestampText = [NSDateFormatter localizedStringFromDate:[connection openedStamp]
                                                              dateStyle:NSDateFormatterMediumStyle
                                                              timeStyle:NSDateFormatterMediumStyle];
 

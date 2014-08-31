@@ -26,6 +26,8 @@
     Boolean expanded;
 }
 
+#pragma mark UI initialization
+
 - (id)initWithServer:(HALServer *)server
 {
     self = [super initWithStyle:UITableViewCellStyleDefault
@@ -186,54 +188,24 @@
                           action:@selector(didTouchDeleteButton)
                 forControlEvents:UIControlEventTouchUpInside];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"ConnectedToServer"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"DisconnectedFromServer"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverUptimeReported:)
-                                                 name:@"ServerUptimeReported"
-                                               object:nil];
-
     return self;
 }
 
-- (void)serverStatusDidChange:(NSNotification *)note
+#pragma mark Delegate methods
+
+- (void)connectedToServer
 {
-    HALServer *serverThatDidChange = note.object;
-    
-    if (serverThatDidChange == self.server) {
-        [self updateButtonStates];
-    }
+    [self updateButtonStates];
 }
 
-- (void)serverUptimeReported:(NSNotification *)note
+- (void)disconnectedFromServer
 {
-    HALServer *serverThatDidReport = note.object;
-    
-    if (serverThatDidReport == self.server) {
-        [self updateButtonStates];
-    }
+    [self updateButtonStates];
 }
 
-- (void)updateButtonStates
-{
-    if ([self.server monitoringRunning]) {
-        [self.startButton setEnabled:NO];
-        [self.pauseButton setEnabled:YES];
-        [self.editButton setEnabled:NO];
-        [self.deleteButton setEnabled:NO];
-    } else {
-        [self.startButton setEnabled:YES];
-        [self.pauseButton setEnabled:NO];
-        [self.editButton setEnabled:YES];
-        [self.deleteButton setEnabled:YES];
-    }
-}
+- (void)serverParameterChanged { }
+
+#pragma mark UIButton events
 
 - (void)didTouchAccessoryButton
 {
@@ -313,6 +285,8 @@
     [alertView show];
 }
 
+#pragma mark UIAlertView delegate methods
+
 - (void)alertView:(UIAlertView *)alertView
 clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -323,6 +297,23 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
 
     HALApplicationDelegate *application = (HALApplicationDelegate *)[[UIApplication sharedApplication] delegate];
     [application switchToMainPage];
+}
+
+#pragma mark Class specific
+
+- (void)updateButtonStates
+{
+    if ([self.server monitoringRunning]) {
+        [self.startButton setEnabled:NO];
+        [self.pauseButton setEnabled:YES];
+        [self.editButton setEnabled:NO];
+        [self.deleteButton setEnabled:NO];
+    } else {
+        [self.startButton setEnabled:YES];
+        [self.pauseButton setEnabled:NO];
+        [self.editButton setEnabled:YES];
+        [self.deleteButton setEnabled:YES];
+    }
 }
 
 @end

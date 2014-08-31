@@ -12,6 +12,7 @@
 #import "HALServerPool.h"
 
 @interface HALConnectionsViewController ()
+    <HALConnectionsRecorderDelegate>
 
 @property (strong, nonatomic) UITableView *connectionsTable;
 @property (strong, nonatomic) NSMutableArray *rows;
@@ -55,32 +56,13 @@
     }
     
     [self.connectionsTable reloadData];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(activeConnectionAppeared:)
-                                                 name:@"ActiveConnectionAppeared"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(activeConnectionDisappeared:)
-                                                 name:@"ActiveConnectionDisappeared"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(activeConnectionsCleared:)
-                                                 name:@"ActiveConnectionsCleared"
-                                               object:nil];
+
+    [[self.server connections] setDelegate:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ActiveConnectionAppeared"
-                                                  object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ActiveConnectionDisappeared"
-                                                  object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ActiveConnectionsCleared"
-                                                  object:nil];
+    [[self.server connections] setDelegate:nil];
 
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 
@@ -148,19 +130,15 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
     [tableView endUpdates];
 }
 
-- (void)activeConnectionAppeared:(NSNotification *)note
+- (void)activeConnectionAppeared:(HALConnectionRecord *)connection
 {
-    HALConnectionRecord *record = note.object;
-    if ([record server] != [self server])
-        return;
-
     NSMutableArray *indexPaths = [[NSMutableArray alloc] initWithObjects:
                                   [NSIndexPath indexPathForRow:0 inSection:0],
                                   nil];
 
     [self.connectionsTable beginUpdates];
     
-    HALConnectionsTableCell *cell = [[HALConnectionsTableCell alloc] initWithConnection:record];
+    HALConnectionsTableCell *cell = [[HALConnectionsTableCell alloc] initWithConnection:connection];
     [self.rows insertObject:cell atIndex:0];
 
     [self.connectionsTable insertRowsAtIndexPaths:indexPaths
@@ -171,16 +149,12 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
     [cell animateAppearance];
 }
 
-- (void)activeConnectionDisappeared:(NSNotification *)note
+- (void)activeConnectionDisappeared:(HALConnectionRecord *)connection
 {
-    HALConnectionRecord *record = note.object;
-    if ([record server] != [self server])
-        return;
-
     NSUInteger rowIndex = 0;
     for (HALConnectionsTableCell *cell in [self rows])
     {
-        if ([cell record] == record) {
+        if ([cell connection] == connection) {
             [cell animateDisappearance];
             
             [self performSelector:@selector(scheduledCellRemove:)
@@ -193,12 +167,8 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (void)activeConnectionsCleared:(NSNotification *)note
+- (void)activeConnectionsCleared
 {
-    HALServer *server = note.object;
-    if (server != [self server])
-        return;
-
     [self.connectionsTable reloadData];
 }
 

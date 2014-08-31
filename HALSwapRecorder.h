@@ -6,6 +6,8 @@
 
 #import "HALResourceRecorder.h"
 
+@protocol HALSwapRecorderDelegate;
+
 @interface HALSwapRecorder : HALResourceRecorder
 
 @property (assign, nonatomic) UInt64 total;
@@ -14,5 +16,13 @@
 - (id)initWithServer:(NSObject *)server;
 
 - (void)parseLine:(NSString *)line;
+
+@end
+
+@protocol HALSwapRecorderDelegate <NSObject>
+
+@required
+
+- (void)swapInfoChanged;
 
 @end

@@ -24,6 +24,8 @@
 
 @synthesize server = _server;
 
+#pragma mark UI initialization
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +36,8 @@
 
     return self;
 }
+
+#pragma mark UI events
 
 - (void)viewDidLoad
 {
@@ -119,19 +123,7 @@
                                                   object:nil];
 }
 
-- (void)keyboardWillShow
-{
-    CGSize contentSize = [self.formView contentSize];
-    contentSize.height += (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 264 : 216;
-    [self.formView setContentSize:contentSize];
-}
-
-- (void)keyboardWillHide
-{
-    CGSize contentSize = [self.formView contentSize];
-    contentSize.height -= (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 264 : 216;
-    [self.formView setContentSize:contentSize];
-}
+#pragma mark UI events help methods
 
 - (UINavigationBar *)addNavigationBar:(CGRect)frame
 {
@@ -239,6 +231,8 @@
     return field;
 }
 
+#pragma mark UIButton events
+
 - (void)didTouchCancelButton
 {
     HALApplicationDelegate *application = (HALApplicationDelegate *)[[UIApplication sharedApplication] delegate];
@@ -268,6 +262,24 @@
     HALApplicationDelegate *application = (HALApplicationDelegate *)[[UIApplication sharedApplication] delegate];
     [application switchToMainPage];
 }
+
+#pragma mark Notifications handlers
+
+- (void)keyboardWillShow
+{
+    CGSize contentSize = [self.formView contentSize];
+    contentSize.height += (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 264 : 216;
+    [self.formView setContentSize:contentSize];
+}
+
+- (void)keyboardWillHide
+{
+    CGSize contentSize = [self.formView contentSize];
+    contentSize.height -= (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 264 : 216;
+    [self.formView setContentSize:contentSize];
+}
+
+#pragma mark Class specific
 
 - (void)setServer:(HALServer *)server
 {

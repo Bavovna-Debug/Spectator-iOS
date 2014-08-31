@@ -17,7 +17,13 @@
 
 #undef SCREENSHOTING
 
+@protocol HALServerConnectionDelegate;
+@protocol HALServerMonitoringDelegate;
+
 @interface HALServer : NSObject <GCDAsyncSocketDelegate, UIAlertViewDelegate>
+
+@property (nonatomic, strong, readwrite) id connectionDelegate;
+@property (nonatomic, strong, readwrite) id monitoringDelegate;
 
 @property (strong, nonatomic) NSString *serverName;
 @property (strong, nonatomic) NSString *dnsName;
@@ -61,5 +67,27 @@
 - (void)stopMonitoring;
 
 - (void)pauseMonitoring;
+
+@end
+
+@protocol HALServerConnectionDelegate <NSObject>
+
+@required
+
+- (void)serverParameterChanged;
+
+- (void)connectedToServer;
+
+- (void)disconnectedFromServer;
+
+@end
+
+@protocol HALServerMonitoringDelegate <NSObject>
+
+@optional
+
+- (void)clock;
+
+- (void)serverUptimeReported;
 
 @end

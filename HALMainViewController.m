@@ -16,6 +16,8 @@
 
 @implementation HALMainViewController
 
+#pragma mark UI initialization
+
 - (id)initWithNibName:(NSString *)nibNameOrNil
                bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,8 @@
 
     return self;
 }
+
+#pragma mark UI events
 
 - (void)viewDidLoad
 {
@@ -57,9 +61,11 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
+
     [self.serversTable reloadData];
 }
+
+#pragma mark UI events help methods
 
 - (UINavigationBar *)addNavigationBar:(CGRect)frame
 {
@@ -91,6 +97,8 @@
     
     return navigationBar;
 }
+
+#pragma mark UIButton events
 
 - (void)didTouchIntroductionButton
 {

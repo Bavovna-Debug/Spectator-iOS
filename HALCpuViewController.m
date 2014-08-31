@@ -8,13 +8,16 @@
 #import "HALCpuGraphPanel.h"
 #import "HALCpuViewController.h"
 #import "HALMemoryPanel.h"
+#import "HALMemoryRecorder.h"
 #import "HALPanelTableView.h"
 #import "HALPanelTableViewCell.h"
 #import "HALServer.h"
 #import "HALServerInformationPanel.h"
 #import "HALSwapPanel.h"
+#import "HALSwapRecorder.h"
 
 @interface HALCpuViewController ()
+    <HALServerMonitoringDelegate, HALProcessorsRecorderDelegate, HALMemoryRecorderDelegate, HALSwapRecorderDelegate>
 
 @property (strong, nonatomic) HALPanelTableView *tableView;
 @property (strong, nonatomic) HALServerInformationPanel *informationPanel;
@@ -58,9 +61,9 @@
     } else {
         informationPanelHeight = 18.0f;
         cpuGraphPanelHeight = 112.0f;
-        cpuChartsPanelHeight = 144.0f;
-        memoryPanelHeight = 96.0f;
-        swapPanelHeight = 74.0f;
+        cpuChartsPanelHeight = 138.0f;
+        memoryPanelHeight = 102.0f;
+        swapPanelHeight = 80.0f;
     }
 
     self.informationPanel = [[HALServerInformationPanel alloc] initWithHeight:informationPanelHeight];
@@ -95,72 +98,20 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverParameterChanged:)
-                                                 name:@"ServerParameterChanged"
-                                               object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"ConnectedToServer"
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverStatusDidChange:)
-                                                 name:@"DisconnectedFromServer"
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(serverUptimeReported:)
-                                                 name:@"ServerUptimeReported"
-                                               object:nil];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(clockProcessor:)
-                                                 name:@"ClockProcessor"
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(memoryInfoChanged:)
-                                                 name:@"MemoryInfoChanged"
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(swapInfoChanged:)
-                                                 name:@"SwapInfoChanged"
-                                               object:nil];
+    [self.server setMonitoringDelegate:self];
+    [[self.server processorsRecorder] setDelegate:self];
+    [[self.server memoryRecorder] setDelegate:self];
+    [[self.server swapRecorder] setDelegate:self];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ServerParameterChanged"
-                                                  object:nil];
+    [self.server setMonitoringDelegate:nil];
+    [[self.server processorsRecorder] setDelegate:nil];
+    [[self.server memoryRecorder] setDelegate:nil];
+    [[self.server swapRecorder] setDelegate:nil];
 
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ConnectedToServer"
-                                                  object:nil];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"DisconnectedFromServer"
-                                                  object:nil];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ServerUptimeReported"
-                                                  object:nil];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"ClockProcessor"
-                                                  object:nil];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"MemoryInfoChanged"
-                                                  object:nil];
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"SwapInfoChanged"
-                                                  object:nil];
     [super viewDidDisappear:animated];
 }
 
@@ -290,53 +241,40 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (void)serverParameterChanged:(NSNotification *)note
+- (void)serverParameterChanged
 {
-    HALServer *serverThatDidChange = note.object;
-    
-    if (serverThatDidChange == self.server)
-        [self.informationPanel updateContent];
+    [self.informationPanel updateContent];
 }
 
-- (void)serverStatusDidChange:(NSNotification *)note
+- (void)connectedToServer
 {
-    HALServer *serverThatDidChange = note.object;
-    
-    if (serverThatDidChange == self.server)
-        [self.informationPanel updateContent];
+    [self.informationPanel updateContent];
 }
 
-- (void)serverUptimeReported:(NSNotification *)note
+- (void)disconnectedFromServer
 {
-    HALServer *serverThatDidReport = note.object;
-    
-    if (serverThatDidReport == self.server)
-        [self.informationPanel updateContent];
+    [self.informationPanel updateContent];
 }
 
-- (void)clockProcessor:(NSNotification *)note
+- (void)serverUptimeReported
 {
-    HALServer *server = note.object;
-    if (server == [self server]) {
-        [self.cpuGraphPanel refresh];
-        [self.cpuChartsPanel refresh];
-    }
+    [self.informationPanel updateContent];
 }
 
-- (void)memoryInfoChanged:(NSNotification *)note
+- (void)clockProcessor
 {
-    HALServer *server = note.object;
-    if (server == [self server]) {
-        [self.memoryPanel refresh];
-    }
+    [self.cpuGraphPanel refresh];
+    [self.cpuChartsPanel refresh];
 }
 
-- (void)swapInfoChanged:(NSNotification *)note
+- (void)memoryInfoChanged
 {
-    HALServer *server = note.object;
-    if (server == [self server]) {
-        [self.swapPanel refresh];
-    }
+    [self.memoryPanel refresh];
+}
+
+- (void)swapInfoChanged
+{
+    [self.swapPanel refresh];
 }
 
 - (void)serverDidSet

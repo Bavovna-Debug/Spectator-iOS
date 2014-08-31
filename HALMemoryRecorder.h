@@ -6,6 +6,8 @@
 
 #import "HALResourceRecorder.h"
 
+@protocol HALMemoryRecorderDelegate;
+
 @interface HALMemoryRecorder : HALResourceRecorder
 
 @property (assign, nonatomic) UInt64 total;
@@ -18,5 +20,13 @@
 - (id)initWithServer:(NSObject *)server;
 
 - (void)parseLine:(NSString *)line;
+
+@end
+
+@protocol HALMemoryRecorderDelegate <NSObject>
+
+@required
+
+- (void)memoryInfoChanged;
 
 @end

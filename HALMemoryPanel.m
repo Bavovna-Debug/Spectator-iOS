@@ -109,8 +109,7 @@
                                                     text:freeText];
 
     self.barGraph = [[HALBarGraph alloc] initWithFrame:chartFrame
-                                             graphType:HALBarGraphHorizontal
-                                          defaultColor:[UIColor greenColor]];
+                                             graphType:HALBarGraphHorizontal];
     [self addSubview:self.barGraph];
 
     self.buffersBlock = [self.barGraph addBlockWithColor:buffersColor];

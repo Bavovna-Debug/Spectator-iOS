@@ -15,6 +15,8 @@
 
 @implementation HALMemoryRecorder
 
+#pragma mark Object cunstructors/destructors
+
 - (id)initWithServer:(HALServer *)server
 {
     self = [super init];
@@ -25,6 +27,8 @@
         
     return self;
 }
+
+#pragma mark Parse input information
 
 - (void)parseLine:(NSString *)line
 {
@@ -96,8 +100,8 @@
         return;
     }
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MemoryInfoChanged"
-                                                        object:self.server];
+    if (self.delegate != nil)
+        [self.delegate memoryInfoChanged];
 }
 
 @end

@@ -15,6 +15,8 @@
 
 @implementation HALIntroductionViewController
 
+#pragma mark UI initialization
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,6 +26,8 @@
     [self.view setBackgroundColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
     return self;
 }
+
+#pragma mark UI events
 
 - (void)viewDidLoad
 {
@@ -83,6 +87,8 @@
     [self.introductionScrollView addSubview:introductionTextLabel];
 }
 
+#pragma mark UI events help methods
+
 - (UINavigationBar *)addNavigationBar:(CGRect)frame
 {
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(frame.origin.x,
@@ -106,6 +112,8 @@
     
     return navigationBar;
 }
+
+#pragma mark UIButton events
 
 - (void)didTouchBackButton
 {

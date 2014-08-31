@@ -4,7 +4,6 @@
 //  Copyright (c) 2014 Meine Werke. All rights reserved.
 //
 
-#import "HALMount.h"
 #import "HALMountsRecorder.h"
 #import "HALServer.h"
 
@@ -15,6 +14,8 @@
 @end
 
 @implementation HALMountsRecorder
+
+#pragma mark Object cunstructors/destructors
 
 - (id)initWithServer:(HALServer *)server
 {
@@ -29,14 +30,16 @@
     return self;
 }
 
+#pragma mark Virtual methods
+
 - (void)resetData
 {
     [super resetData];
 
     self.mounts = [NSMutableArray array];
 
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MountsReset"
-                                                        object:self.server];
+    if (self.delegate != nil)
+        [self.delegate mountsReset];
 }
 
 - (void)serverDidConnect
@@ -44,10 +47,12 @@
     [super serverDidConnect];
 
     [self.mounts removeAllObjects];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"MountsReset"
-                                                        object:self.server];
+
+    if (self.delegate != nil)
+        [self.delegate mountsReset];
 }
+
+#pragma mark Parse input information
 
 - (void)parseLine:(NSString *)line
 {
@@ -98,9 +103,9 @@
         [mount setFreeBlocks:freeBlocks];
         
         [self.mounts addObject:mount];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"MountDetected"
-                                                            object:mount];
+
+        if (self.delegate != nil)
+            [self.delegate mountDetected:mount];
     }
 }
 
@@ -135,8 +140,8 @@
             [mount setFreeBlocks:freeBlocks];
             [mount setBlockSize:blockSize];
 
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"MountChanged"
-                                                                object:mount];
+            if (self.delegate != nil)
+                [self.delegate mountChanged:mount];
             break;
         }
     }
