@@ -104,6 +104,8 @@
 		9473C7A11912CE0A008CD056 /* HALSwapRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */; };
 		9473C7A4191505C6008CD056 /* HALResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* HALResourceRecorder.m */; };
 		9473C7A5191505C6008CD056 /* HALResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* HALResourceRecorder.m */; };
+		94772EA519CC1B350095DD1B /* HALDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* HALDesigner.m */; };
+		94772EA619CC1B350095DD1B /* HALDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* HALDesigner.m */; };
 		947D8E2118F55CA400C48954 /* HALCpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* HALCpuViewController.m */; };
 		947D8E2218F55CA400C48954 /* HALCpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* HALCpuViewController.m */; };
 		9486E56218FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* HALMonitorTabBarController.m */; };
@@ -290,6 +292,8 @@
 		9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALSwapRecorder.m; sourceTree = "<group>"; };
 		9473C7A2191505C6008CD056 /* HALResourceRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALResourceRecorder.h; sourceTree = "<group>"; };
 		9473C7A3191505C6008CD056 /* HALResourceRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALResourceRecorder.m; sourceTree = "<group>"; };
+		94772EA319CC1B350095DD1B /* HALDesigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALDesigner.h; sourceTree = "<group>"; };
+		94772EA419CC1B350095DD1B /* HALDesigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALDesigner.m; sourceTree = "<group>"; };
 		947D8E1F18F55CA400C48954 /* HALCpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuViewController.h; sourceTree = "<group>"; };
 		947D8E2018F55CA400C48954 /* HALCpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuViewController.m; sourceTree = "<group>"; };
 		9486E56018FFC1BD00E174C5 /* HALMonitorTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMonitorTabBarController.h; sourceTree = "<group>"; };
@@ -413,8 +417,7 @@
 				94175D2A18F9658C00DB14B7 /* Main */,
 				94D6EECD18EDF47000740F04 /* Monitor */,
 				94D6EECE18EDF49200740F04 /* Server */,
-				944EF26218ED49010047E519 /* GCDAsyncSocket.h */,
-				944EF26318ED49010047E519 /* GCDAsyncSocket.m */,
+				94772EA219CC1A630095DD1B /* External */,
 				940A203418EBD89C00620F45 /* Images.xcassets */,
 				944EF25418EC6AFF0047E519 /* Localizations */,
 				944EF25C18EC6BB20047E519 /* Images */,
@@ -503,6 +506,8 @@
 		94175D2A18F9658C00DB14B7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				94772EA319CC1B350095DD1B /* HALDesigner.h */,
+				94772EA419CC1B350095DD1B /* HALDesigner.m */,
 				94175D2B18F965A800DB14B7 /* HALMainViewController.h */,
 				94175D2C18F965A800DB14B7 /* HALMainViewController.m */,
 				943BAB8118EBE76E00A44CBD /* HALServersTable.h */,
@@ -681,6 +686,15 @@
 				945ECB8F19A48B540097DC0A /* BarGraphPanelPod@2x.png */,
 			);
 			name = BarGraph;
+			sourceTree = "<group>";
+		};
+		94772EA219CC1A630095DD1B /* External */ = {
+			isa = PBXGroup;
+			children = (
+				944EF26218ED49010047E519 /* GCDAsyncSocket.h */,
+				944EF26318ED49010047E519 /* GCDAsyncSocket.m */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		948D85EC18F3087800DDDB5A /* CircleGraph */ = {
@@ -1022,6 +1036,7 @@
 				9461383C19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */,
 				94D6EED118EE77F200740F04 /* HALConnectionsTableCell.m in Sources */,
 				9486E56218FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */,
+				94772EA519CC1B350095DD1B /* HALDesigner.m in Sources */,
 				948D85D418F19A2200DDDB5A /* HALMountsViewController.m in Sources */,
 				940A202F18EBD89C00620F45 /* main.m in Sources */,
 				9473C7A01912CE0A008CD056 /* HALSwapRecorder.m in Sources */,
@@ -1080,6 +1095,7 @@
 				9461383D19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */,
 				94AD97BA18EE9BBB0001C695 /* HALConnectionsTableCell.m in Sources */,
 				9486E56318FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */,
+				94772EA619CC1B350095DD1B /* HALDesigner.m in Sources */,
 				94AD97C818EF16FE0001C695 /* HALMonitorViewController.m in Sources */,
 				94AD97BC18EE9BC60001C695 /* HALConnectionsRecorder.m in Sources */,
 				9473C7A11912CE0A008CD056 /* HALSwapRecorder.m in Sources */,

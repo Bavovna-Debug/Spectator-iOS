@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALMainViewController.h"
 #import "HALServersTable.h"
 
@@ -26,7 +27,7 @@
     if (self == nil)
         return nil;
 
-    [self.view setBackgroundColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [self.view setBackgroundColor:[UIColor commonBackground]];
 
     return self;
 }
@@ -73,7 +74,7 @@
                                                                                        frame.origin.y,
                                                                                        frame.size.width,
                                                                                        44)];
-    [navigationBar setTintColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [navigationBar setTintColor:[UIColor navigationBarTint]];
     [self.view addSubview:navigationBar];
     
     UIBarButtonItem *introductionButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"INTRODUCTION_BUTTON", nil)

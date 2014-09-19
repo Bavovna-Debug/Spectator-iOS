@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALServerEditViewController.h"
 #import "HALServerPool.h"
 
@@ -32,7 +33,7 @@
     if (self == nil)
         return nil;
 
-    [self.view setBackgroundColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [self.view setBackgroundColor:[UIColor serverEditBackground]];
 
     return self;
 }
@@ -88,9 +89,9 @@
 
     UIColor *tmpBackground;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        tmpBackground = [UIColor colorWithRed:207/255.0f green:210/255.0f blue:214/255.0f alpha:1.0f];
+        tmpBackground = [UIColor serverEditServerNameBackgroundPad];
     } else {
-        tmpBackground = [UIColor colorWithRed:216/255.0f green:219/255.0f blue:223/255.0f alpha:1.0f];
+        tmpBackground = [UIColor serverEditServerNameBackgroundPod];
     }
     [self.serverNameField.inputAccessoryView setBackgroundColor:tmpBackground];
 }
@@ -131,7 +132,7 @@
                                                                                        frame.origin.y,
                                                                                        frame.size.width,
                                                                                        44)];
-    [navigationBar setTintColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [navigationBar setTintColor:[UIColor navigationBarTint]];
     [self.view addSubview:navigationBar];
 
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"SERVER_EDIT_CANCEL_BUTTON", nil)
@@ -161,7 +162,7 @@
     CGRect frame = [self.view bounds];
     CGSize margin = CGSizeMake(12, 4);
     
-    UIColor *textColor = [UIColor darkGrayColor];
+    UIColor *textColor = [UIColor serverEditDescription];
     UIFont *font = [UIFont systemFontOfSize:13.0f];
     
     CGSize contentSize = [self.formView contentSize];
@@ -191,8 +192,8 @@
     CGSize margin = CGSizeMake(12, 4);
     
     UIColor *backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.5f];
-    UIColor *labelTextColor = [UIColor darkTextColor];
-    UIColor *fieldTextColor = [UIColor colorWithRed:0.000f green:0.251f blue:0.502f alpha:1.0f];
+    UIColor *labelTextColor = [UIColor serverEditLabel];
+    UIColor *fieldTextColor = [UIColor serverEditField];
     UIFont *labelFont = [UIFont systemFontOfSize:15.0f];
     UIFont *fieldFont = [UIFont systemFontOfSize:15.0f];
     
@@ -207,7 +208,7 @@
     UIView *fieldLineView = [[UIView alloc] initWithFrame:CGRectInset(frame, -1, 0)];
     [fieldLineView setBackgroundColor:backgroundColor];
     [self.formView addSubview:fieldLineView];
-    [fieldLineView.layer setBorderColor:[[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f] CGColor]];
+    [fieldLineView.layer setBorderColor:[[UIColor serverEditBorder] CGColor]];
     [fieldLineView.layer setBorderWidth:1.0f];
 
     CGSize textSize = [labelText sizeWithFont:labelFont];

@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALIntroductionViewController.h"
 #import "HALMainViewController.h"
 #import "HALMonitorTabBarController.h"
@@ -27,7 +28,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     */
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor mainWindowBackground];
     
     [self switchToMainPage];
 

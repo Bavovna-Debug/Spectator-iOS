@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALIntroductionViewController.h"
 
 @interface HALIntroductionViewController ()
@@ -23,7 +24,7 @@
     if (self == nil)
         return nil;
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [self.view setBackgroundColor:[UIColor commonBackground]];
     return self;
 }
 
@@ -73,7 +74,7 @@
     [introductionTextLabel setBackgroundColor:[UIColor clearColor]];
     [introductionTextLabel setText:introductionText];
     [introductionTextLabel setFont:introductionFont];
-    [introductionTextLabel setTextColor:[UIColor darkTextColor]];
+    [introductionTextLabel setTextColor:[UIColor introductionText]];
     [introductionTextLabel setTextAlignment:NSTextAlignmentLeft];
     [introductionTextLabel setNumberOfLines:0];
     [introductionTextLabel setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
@@ -95,7 +96,7 @@
                                                                                        frame.origin.y,
                                                                                        frame.size.width,
                                                                                        44)];
-    [navigationBar setTintColor:[UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f]];
+    [navigationBar setTintColor:[UIColor navigationBarTint]];
     [self.view addSubview:navigationBar];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"INTRODUCTION_BACK_BUTTON", nil)

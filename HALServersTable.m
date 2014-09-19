@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALMainViewController.h"
 #import "HALServer.h"
 #import "HALServerPool.h"
@@ -26,7 +27,7 @@
     if (self == nil)
         return nil;
     
-    [self setBackgroundColor:[UIColor colorWithRed:1.000f green:0.929f blue:0.831f alpha:1.0f]];
+    [self setBackgroundColor:[UIColor serversTableBackground]];
     
     self.delegate = self;
     self.dataSource = self;
@@ -34,7 +35,7 @@
 
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f)
         self.separatorInset = UIEdgeInsetsZero;
-    self.separatorColor = [UIColor colorWithRed:1.000f green:0.600f blue:0.000f alpha:1.0f];
+    self.separatorColor = [UIColor serversTableSeparator];
 
     [[HALServerPool sharedServerPool] setDelegate:self];
 

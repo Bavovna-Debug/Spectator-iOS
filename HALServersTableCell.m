@@ -5,6 +5,7 @@
 //
 
 #import "HALApplicationDelegate.h"
+#import "HALDesigner.h"
 #import "HALServer.h"
 #import "HALServerPool.h"
 #import "HALServersTableCell.h"
@@ -130,7 +131,7 @@
     self.serverNameLabel = [[UILabel alloc] initWithFrame:serverNameFrame];
     [self.serverNameLabel setBackgroundColor:[UIColor clearColor]];
     [self.serverNameLabel setText:[self.server serverName]];
-    [self.serverNameLabel setTextColor:[UIColor blackColor]];
+    [self.serverNameLabel setTextColor:[UIColor serversTableServerName]];
     [self.serverNameLabel setFont:serverNameFont];
     
     self.dnsNameLabel = [[UILabel alloc] initWithFrame:dnsNameFrame];
@@ -138,7 +139,7 @@
     [self.dnsNameLabel setText:[NSString stringWithFormat:@"%@ (%d)",
                                 [self.server dnsName],
                                 [self.server portNumber]]];
-    [self.dnsNameLabel setTextColor:[UIColor darkGrayColor]];
+    [self.dnsNameLabel setTextColor:[UIColor serversTableDNSName]];
     [self.dnsNameLabel setFont:dnsNameFont];
     
     UIImage *startMonitoringImage = [UIImage imageNamed:@"ActionButton-Start"];
