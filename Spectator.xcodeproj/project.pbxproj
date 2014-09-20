@@ -12,7 +12,7 @@
 		940A202718EBD89C00620F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202618EBD89C00620F45 /* UIKit.framework */; };
 		940A202D18EBD89C00620F45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940A202B18EBD89C00620F45 /* Localizable.strings */; };
 		940A202F18EBD89C00620F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A202E18EBD89C00620F45 /* main.m */; };
-		940A203318EBD89C00620F45 /* HALApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A203218EBD89C00620F45 /* HALApplicationDelegate.m */; };
+		940A203318EBD89C00620F45 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A203218EBD89C00620F45 /* ApplicationDelegate.m */; };
 		940A203C18EBD89C00620F45 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A203B18EBD89C00620F45 /* XCTest.framework */; };
 		940A203D18EBD89C00620F45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202218EBD89C00620F45 /* Foundation.framework */; };
 		940A203E18EBD89C00620F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202618EBD89C00620F45 /* UIKit.framework */; };
@@ -22,17 +22,16 @@
 		94175D1218F6DE5F00DB14B7 /* CircleGraphBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 94175D1118F6DE5F00DB14B7 /* CircleGraphBackground.png */; };
 		94175D1318F6DE6300DB14B7 /* CircleGraphLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = 94175D0F18F6DAD800DB14B7 /* CircleGraphLayer.png */; };
 		94175D1418F6DE6500DB14B7 /* CircleGraphBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 94175D1118F6DE5F00DB14B7 /* CircleGraphBackground.png */; };
-		94175D1718F6E2E200DB14B7 /* HALMount.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1618F6E2E200DB14B7 /* HALMount.m */; };
-		94175D1818F6E2E200DB14B7 /* HALMount.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1618F6E2E200DB14B7 /* HALMount.m */; };
-		94175D1B18F71DAB00DB14B7 /* HALMountPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1A18F71DAB00DB14B7 /* HALMountPanel.m */; };
-		94175D1C18F71DAB00DB14B7 /* HALMountPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1A18F71DAB00DB14B7 /* HALMountPanel.m */; };
-		94175D2D18F965A800DB14B7 /* HALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D2C18F965A800DB14B7 /* HALMainViewController.m */; };
-		94175D2E18F965A800DB14B7 /* HALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D2C18F965A800DB14B7 /* HALMainViewController.m */; };
-		943BAB8318EBE76E00A44CBD /* HALServersTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 943BAB8218EBE76E00A44CBD /* HALServersTable.m */; };
-		943BAB8618EBE7AA00A44CBD /* Spectator-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 940A202A18EBD89C00620F45 /* Spectator-Info.plist */; };
-		944EF21B18EC3EC20047E519 /* HALServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21A18EC3EC20047E519 /* HALServer.m */; };
-		944EF21E18EC3FD70047E519 /* HALServerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21D18EC3FD70047E519 /* HALServerPool.m */; };
-		944EF22318EC479F0047E519 /* HALServersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF22218EC479F0047E519 /* HALServersTableCell.m */; };
+		94175D1718F6E2E200DB14B7 /* SRVMountRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */; };
+		94175D1818F6E2E200DB14B7 /* SRVMountRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */; };
+		94175D1B18F71DAB00DB14B7 /* MountPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1A18F71DAB00DB14B7 /* MountPanel.m */; };
+		94175D1C18F71DAB00DB14B7 /* MountPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D1A18F71DAB00DB14B7 /* MountPanel.m */; };
+		94175D2D18F965A800DB14B7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D2C18F965A800DB14B7 /* MainViewController.m */; };
+		94175D2E18F965A800DB14B7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94175D2C18F965A800DB14B7 /* MainViewController.m */; };
+		943BAB8318EBE76E00A44CBD /* ServersTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 943BAB8218EBE76E00A44CBD /* ServersTable.m */; };
+		944EF21B18EC3EC20047E519 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21A18EC3EC20047E519 /* Server.m */; };
+		944EF21E18EC3FD70047E519 /* ServerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21D18EC3FD70047E519 /* ServerPool.m */; };
+		944EF22318EC479F0047E519 /* ServersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF22218EC479F0047E519 /* ServersTableCell.m */; };
 		944EF22B18EC6AC60047E519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202218EBD89C00620F45 /* Foundation.framework */; };
 		944EF22C18EC6AC60047E519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202418EBD89C00620F45 /* CoreGraphics.framework */; };
 		944EF22D18EC6AC60047E519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 940A202618EBD89C00620F45 /* UIKit.framework */; };
@@ -43,13 +42,11 @@
 		944EF24B18EC6AC70047E519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 944EF24918EC6AC70047E519 /* InfoPlist.strings */; };
 		944EF24D18EC6AC70047E519 /* Spectator_LiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF24C18EC6AC70047E519 /* Spectator_LiteTests.m */; };
 		944EF25518EC6B420047E519 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 940A202B18EBD89C00620F45 /* Localizable.strings */; };
-		944EF25618EC6B450047E519 /* HALServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21A18EC3EC20047E519 /* HALServer.m */; };
-		944EF25718EC6B470047E519 /* HALServerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21D18EC3FD70047E519 /* HALServerPool.m */; };
-		944EF25918EC6B4D0047E519 /* HALServersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF22218EC479F0047E519 /* HALServersTableCell.m */; };
-		944EF25A18EC6B500047E519 /* HALServersTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 943BAB8218EBE76E00A44CBD /* HALServersTable.m */; };
-		944EF25B18EC6B530047E519 /* HALApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A203218EBD89C00620F45 /* HALApplicationDelegate.m */; };
-		944EF26418ED49010047E519 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF26318ED49010047E519 /* GCDAsyncSocket.m */; };
-		944EF26518ED49010047E519 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF26318ED49010047E519 /* GCDAsyncSocket.m */; };
+		944EF25618EC6B450047E519 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21A18EC3EC20047E519 /* Server.m */; };
+		944EF25718EC6B470047E519 /* ServerPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF21D18EC3FD70047E519 /* ServerPool.m */; };
+		944EF25918EC6B4D0047E519 /* ServersTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EF22218EC479F0047E519 /* ServersTableCell.m */; };
+		944EF25A18EC6B500047E519 /* ServersTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 943BAB8218EBE76E00A44CBD /* ServersTable.m */; };
+		944EF25B18EC6B530047E519 /* ApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A203218EBD89C00620F45 /* ApplicationDelegate.m */; };
 		944FD5051901CAB600B16C60 /* ActionButton-Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5011901CAB600B16C60 /* ActionButton-Delete.png */; };
 		944FD5061901CAB600B16C60 /* ActionButton-Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5011901CAB600B16C60 /* ActionButton-Delete.png */; };
 		944FD5071901CAB600B16C60 /* ActionButton-Edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5021901CAB600B16C60 /* ActionButton-Edit.png */; };
@@ -66,20 +63,20 @@
 		944FD5161901CDF900B16C60 /* Network-StartGaging.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5141901CDF900B16C60 /* Network-StartGaging.png */; };
 		944FD5181901D1E900B16C60 /* Network-StopGaging.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5171901D1E900B16C60 /* Network-StopGaging.png */; };
 		944FD5191901D1E900B16C60 /* Network-StopGaging.png in Resources */ = {isa = PBXBuildFile; fileRef = 944FD5171901D1E900B16C60 /* Network-StopGaging.png */; };
-		94536FCB190DA04B00960E5F /* HALCpuDetailsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FCA190DA04B00960E5F /* HALCpuDetailsPanel.m */; };
-		94536FCC190DA04B00960E5F /* HALCpuDetailsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FCA190DA04B00960E5F /* HALCpuDetailsPanel.m */; };
-		94536FD3190DA0B800960E5F /* HALCpuDetailsBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD2190DA0B800960E5F /* HALCpuDetailsBarGraph.m */; };
-		94536FD4190DA0B800960E5F /* HALCpuDetailsBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD2190DA0B800960E5F /* HALCpuDetailsBarGraph.m */; };
-		94536FD7190E1EDB00960E5F /* HALMemoryPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD6190E1EDB00960E5F /* HALMemoryPanel.m */; };
-		94536FD8190E1EDB00960E5F /* HALMemoryPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD6190E1EDB00960E5F /* HALMemoryPanel.m */; };
-		94536FDB190E1EF500960E5F /* HALSwapPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDA190E1EF500960E5F /* HALSwapPanel.m */; };
-		94536FDC190E1EF500960E5F /* HALSwapPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDA190E1EF500960E5F /* HALSwapPanel.m */; };
-		94536FDF190E223700960E5F /* HALPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDE190E223700960E5F /* HALPanel.m */; };
-		94536FE0190E223700960E5F /* HALPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDE190E223700960E5F /* HALPanel.m */; };
-		94536FE3190FBEB300960E5F /* HALCpuGraphPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FE2190FBEB300960E5F /* HALCpuGraphPanel.m */; };
-		94536FE4190FBEB300960E5F /* HALCpuGraphPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FE2190FBEB300960E5F /* HALCpuGraphPanel.m */; };
-		9454AD8E18F014860046A2E9 /* HALProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */; };
-		9454AD8F18F029B60046A2E9 /* HALProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */; };
+		94536FCB190DA04B00960E5F /* CpuDetailsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FCA190DA04B00960E5F /* CpuDetailsPanel.m */; };
+		94536FCC190DA04B00960E5F /* CpuDetailsPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FCA190DA04B00960E5F /* CpuDetailsPanel.m */; };
+		94536FD3190DA0B800960E5F /* CpuDetailsBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD2190DA0B800960E5F /* CpuDetailsBarGraph.m */; };
+		94536FD4190DA0B800960E5F /* CpuDetailsBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD2190DA0B800960E5F /* CpuDetailsBarGraph.m */; };
+		94536FD7190E1EDB00960E5F /* MemoryPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD6190E1EDB00960E5F /* MemoryPanel.m */; };
+		94536FD8190E1EDB00960E5F /* MemoryPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FD6190E1EDB00960E5F /* MemoryPanel.m */; };
+		94536FDB190E1EF500960E5F /* SwapPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDA190E1EF500960E5F /* SwapPanel.m */; };
+		94536FDC190E1EF500960E5F /* SwapPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDA190E1EF500960E5F /* SwapPanel.m */; };
+		94536FDF190E223700960E5F /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDE190E223700960E5F /* Panel.m */; };
+		94536FE0190E223700960E5F /* Panel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FDE190E223700960E5F /* Panel.m */; };
+		94536FE3190FBEB300960E5F /* CpuGraphPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FE2190FBEB300960E5F /* CpuGraphPanel.m */; };
+		94536FE4190FBEB300960E5F /* CpuGraphPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94536FE2190FBEB300960E5F /* CpuGraphPanel.m */; };
+		9454AD8E18F014860046A2E9 /* SRVProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */; };
+		9454AD8F18F029B60046A2E9 /* SRVProcessorsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */; };
 		945ECB8B19A383C20097DC0A /* BarGraphPanelPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */; };
 		945ECB8C19A383C20097DC0A /* BarGraphPanelPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8919A383C20097DC0A /* BarGraphPanelPad.png */; };
 		945ECB8D19A383C20097DC0A /* BarGraphPanelPod.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB8A19A383C20097DC0A /* BarGraphPanelPod.png */; };
@@ -90,26 +87,28 @@
 		945ECB9419A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */; };
 		94613834190FDD12006F18DA /* CPUGraphBackgroundPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 94613832190FDD12006F18DA /* CPUGraphBackgroundPad.png */; };
 		94613835190FDD12006F18DA /* CPUGraphBackgroundPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 94613833190FDD12006F18DA /* CPUGraphBackgroundPhone.png */; };
-		9461383819111E7F006F18DA /* HALPanelTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383719111E7F006F18DA /* HALPanelTableView.m */; };
-		9461383919111E7F006F18DA /* HALPanelTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383719111E7F006F18DA /* HALPanelTableView.m */; };
-		9461383C19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383B19111EAE006F18DA /* HALPanelTableViewCell.m */; };
-		9461383D19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383B19111EAE006F18DA /* HALPanelTableViewCell.m */; };
-		9473C7941912BF9F008CD056 /* HALBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7931912BF9F008CD056 /* HALBarGraph.m */; };
-		9473C7951912BF9F008CD056 /* HALBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7931912BF9F008CD056 /* HALBarGraph.m */; };
-		9473C7981912CBCA008CD056 /* HALBarGraphBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7971912CBCA008CD056 /* HALBarGraphBlock.m */; };
-		9473C7991912CBCB008CD056 /* HALBarGraphBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7971912CBCA008CD056 /* HALBarGraphBlock.m */; };
-		9473C79C1912CD3F008CD056 /* HALMemoryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79B1912CD3F008CD056 /* HALMemoryRecorder.m */; };
-		9473C79D1912CD3F008CD056 /* HALMemoryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79B1912CD3F008CD056 /* HALMemoryRecorder.m */; };
-		9473C7A01912CE0A008CD056 /* HALSwapRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */; };
-		9473C7A11912CE0A008CD056 /* HALSwapRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */; };
-		9473C7A4191505C6008CD056 /* HALResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* HALResourceRecorder.m */; };
-		9473C7A5191505C6008CD056 /* HALResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* HALResourceRecorder.m */; };
-		94772EA519CC1B350095DD1B /* HALDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* HALDesigner.m */; };
-		94772EA619CC1B350095DD1B /* HALDesigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* HALDesigner.m */; };
-		947D8E2118F55CA400C48954 /* HALCpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* HALCpuViewController.m */; };
-		947D8E2218F55CA400C48954 /* HALCpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* HALCpuViewController.m */; };
-		9486E56218FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* HALMonitorTabBarController.m */; };
-		9486E56318FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* HALMonitorTabBarController.m */; };
+		9461383819111E7F006F18DA /* PanelTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383719111E7F006F18DA /* PanelTableView.m */; };
+		9461383919111E7F006F18DA /* PanelTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383719111E7F006F18DA /* PanelTableView.m */; };
+		9461383C19111EAE006F18DA /* PanelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383B19111EAE006F18DA /* PanelTableViewCell.m */; };
+		9461383D19111EAE006F18DA /* PanelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9461383B19111EAE006F18DA /* PanelTableViewCell.m */; };
+		9473C7941912BF9F008CD056 /* BarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7931912BF9F008CD056 /* BarGraph.m */; };
+		9473C7951912BF9F008CD056 /* BarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7931912BF9F008CD056 /* BarGraph.m */; };
+		9473C7981912CBCA008CD056 /* BarGraphBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7971912CBCA008CD056 /* BarGraphBlock.m */; };
+		9473C7991912CBCB008CD056 /* BarGraphBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7971912CBCA008CD056 /* BarGraphBlock.m */; };
+		9473C79C1912CD3F008CD056 /* SRVMemoryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */; };
+		9473C79D1912CD3F008CD056 /* SRVMemoryRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */; };
+		9473C7A01912CE0A008CD056 /* SRVSwapRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */; };
+		9473C7A11912CE0A008CD056 /* SRVSwapRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */; };
+		9473C7A4191505C6008CD056 /* SRVResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */; };
+		9473C7A5191505C6008CD056 /* SRVResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */; };
+		94772EA519CC1B350095DD1B /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* Designer.m */; };
+		94772EA619CC1B350095DD1B /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* Designer.m */; };
+		94772EA919CC3D210095DD1B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */; };
+		94772EAA19CC3D210095DD1B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */; };
+		947D8E2118F55CA400C48954 /* CpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* CpuViewController.m */; };
+		947D8E2218F55CA400C48954 /* CpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* CpuViewController.m */; };
+		9486E56218FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* MonitorTabBarController.m */; };
+		9486E56318FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* MonitorTabBarController.m */; };
 		9486E56C190008BA00E174C5 /* TabBarButton-CPU.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E56A190008BA00E174C5 /* TabBarButton-CPU.png */; };
 		9486E56D190008BA00E174C5 /* TabBarButton-CPU.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E56A190008BA00E174C5 /* TabBarButton-CPU.png */; };
 		9486E5711900094300E174C5 /* TabBarButton-CPU@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E5701900094300E174C5 /* TabBarButton-CPU@2x.png */; };
@@ -138,51 +137,51 @@
 		9486E597190068CB00E174C5 /* NavBarButton-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E594190068CB00E174C5 /* NavBarButton-Back.png */; };
 		9486E598190068CB00E174C5 /* NavBarButton-Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E595190068CB00E174C5 /* NavBarButton-Back@2x.png */; };
 		9486E599190068CB00E174C5 /* NavBarButton-Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E595190068CB00E174C5 /* NavBarButton-Back@2x.png */; };
-		9486E5A819017D1200E174C5 /* HALNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5A719017D1200E174C5 /* HALNetworkRecorder.m */; };
-		9486E5A919017D1200E174C5 /* HALNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5A719017D1200E174C5 /* HALNetworkRecorder.m */; };
-		9486E5AC19017D2900E174C5 /* HALNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AB19017D2900E174C5 /* HALNetworkInterface.m */; };
-		9486E5AD19017D2900E174C5 /* HALNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AB19017D2900E174C5 /* HALNetworkInterface.m */; };
-		9486E5B019017F2500E174C5 /* HALNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AF19017F2500E174C5 /* HALNetworkViewController.m */; };
-		9486E5B119017F2500E174C5 /* HALNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AF19017F2500E174C5 /* HALNetworkViewController.m */; };
+		9486E5A819017D1200E174C5 /* SRVNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */; };
+		9486E5A919017D1200E174C5 /* SRVNetworkRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */; };
+		9486E5AC19017D2900E174C5 /* SRVNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */; };
+		9486E5AD19017D2900E174C5 /* SRVNetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */; };
+		9486E5B019017F2500E174C5 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AF19017F2500E174C5 /* NetworkViewController.m */; };
+		9486E5B119017F2500E174C5 /* NetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5AF19017F2500E174C5 /* NetworkViewController.m */; };
 		9486E5B41901853E00E174C5 /* TabBarButton-Network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E5B21901853E00E174C5 /* TabBarButton-Network.png */; };
 		9486E5B51901853E00E174C5 /* TabBarButton-Network.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E5B21901853E00E174C5 /* TabBarButton-Network.png */; };
 		9486E5B61901853E00E174C5 /* TabBarButton-Network@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E5B31901853E00E174C5 /* TabBarButton-Network@2x.png */; };
 		9486E5B71901853E00E174C5 /* TabBarButton-Network@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9486E5B31901853E00E174C5 /* TabBarButton-Network@2x.png */; };
-		9486E5BA1901923000E174C5 /* HALNetworkInterfacePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5B91901923000E174C5 /* HALNetworkInterfacePanel.m */; };
-		9486E5BB1901923000E174C5 /* HALNetworkInterfacePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5B91901923000E174C5 /* HALNetworkInterfacePanel.m */; };
-		948D85C618F0600A00DDDB5A /* HALProcessorUsageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C518F0600A00DDDB5A /* HALProcessorUsageRecord.m */; };
-		948D85C718F0600A00DDDB5A /* HALProcessorUsageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C518F0600A00DDDB5A /* HALProcessorUsageRecord.m */; };
-		948D85CA18F064AF00DDDB5A /* HALCpuGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C918F064AF00DDDB5A /* HALCpuGraph.m */; };
-		948D85CB18F064AF00DDDB5A /* HALCpuGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C918F064AF00DDDB5A /* HALCpuGraph.m */; };
-		948D85D418F19A2200DDDB5A /* HALMountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85D318F19A2200DDDB5A /* HALMountsViewController.m */; };
-		948D85D518F19A2200DDDB5A /* HALMountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85D318F19A2200DDDB5A /* HALMountsViewController.m */; };
+		9486E5BA1901923000E174C5 /* NetworkInterfacePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5B91901923000E174C5 /* NetworkInterfacePanel.m */; };
+		9486E5BB1901923000E174C5 /* NetworkInterfacePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E5B91901923000E174C5 /* NetworkInterfacePanel.m */; };
+		948D85C618F0600A00DDDB5A /* SRVProcessorUsageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */; };
+		948D85C718F0600A00DDDB5A /* SRVProcessorUsageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */; };
+		948D85CA18F064AF00DDDB5A /* CpuGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C918F064AF00DDDB5A /* CpuGraph.m */; };
+		948D85CB18F064AF00DDDB5A /* CpuGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85C918F064AF00DDDB5A /* CpuGraph.m */; };
+		948D85D418F19A2200DDDB5A /* MountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85D318F19A2200DDDB5A /* MountsViewController.m */; };
+		948D85D518F19A2200DDDB5A /* MountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85D318F19A2200DDDB5A /* MountsViewController.m */; };
 		948D85E218F2D3F800DDDB5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940A203418EBD89C00620F45 /* Images.xcassets */; };
 		948D85E318F2D40300DDDB5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 940A203418EBD89C00620F45 /* Images.xcassets */; };
-		948D85E618F2DE2100DDDB5A /* HALDiskUsageGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E518F2DE2100DDDB5A /* HALDiskUsageGraph.m */; };
-		948D85E718F2DE2100DDDB5A /* HALDiskUsageGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E518F2DE2100DDDB5A /* HALDiskUsageGraph.m */; };
-		948D85EA18F2DF1800DDDB5A /* HALMountsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E918F2DF1800DDDB5A /* HALMountsRecorder.m */; };
-		948D85EB18F2DF1800DDDB5A /* HALMountsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E918F2DF1800DDDB5A /* HALMountsRecorder.m */; };
+		948D85E618F2DE2100DDDB5A /* DiskUsageGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E518F2DE2100DDDB5A /* DiskUsageGraph.m */; };
+		948D85E718F2DE2100DDDB5A /* DiskUsageGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E518F2DE2100DDDB5A /* DiskUsageGraph.m */; };
+		948D85EA18F2DF1800DDDB5A /* SRVMountsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */; };
+		948D85EB18F2DF1800DDDB5A /* SRVMountsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */; };
 		949197C719056768006042DF /* Introduction.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949197CA19056768006042DF /* Introduction.strings */; };
 		949197C819056768006042DF /* Introduction.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949197CA19056768006042DF /* Introduction.strings */; };
-		949197D219057039006042DF /* HALIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* HALIntroductionViewController.m */; };
-		949197D319057039006042DF /* HALIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* HALIntroductionViewController.m */; };
-		94AD97B918EE9BB80001C695 /* HALConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EECB18EDF44500740F04 /* HALConnectionsViewController.m */; };
-		94AD97BA18EE9BBB0001C695 /* HALConnectionsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EED018EE77F200740F04 /* HALConnectionsTableCell.m */; };
-		94AD97BB18EE9BC30001C695 /* HALConnectionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC518EDD2C100740F04 /* HALConnectionRecord.m */; };
-		94AD97BC18EE9BC60001C695 /* HALConnectionsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC818EDEA8500740F04 /* HALConnectionsRecorder.m */; };
+		949197D219057039006042DF /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* IntroductionViewController.m */; };
+		949197D319057039006042DF /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* IntroductionViewController.m */; };
+		94AD97B918EE9BB80001C695 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EECB18EDF44500740F04 /* ConnectionsViewController.m */; };
+		94AD97BA18EE9BBB0001C695 /* ConnectionsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EED018EE77F200740F04 /* ConnectionsTableCell.m */; };
+		94AD97BB18EE9BC30001C695 /* SRVConnectionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */; };
+		94AD97BC18EE9BC60001C695 /* SRVConnectionsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */; };
 		94AD97C018EEAAFA0001C695 /* InetConnectionAppeared.png in Resources */ = {isa = PBXBuildFile; fileRef = 94AD97BE18EEAAFA0001C695 /* InetConnectionAppeared.png */; };
 		94AD97C118EEAAFA0001C695 /* InetConnectionDisappeared.png in Resources */ = {isa = PBXBuildFile; fileRef = 94AD97BF18EEAAFA0001C695 /* InetConnectionDisappeared.png */; };
-		94AD97C418EF14650001C695 /* HALServerInformationPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C318EF14650001C695 /* HALServerInformationPanel.m */; };
-		94AD97C718EF16F50001C695 /* HALMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C618EF16F50001C695 /* HALMonitorViewController.m */; };
-		94AD97C818EF16FE0001C695 /* HALMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C618EF16F50001C695 /* HALMonitorViewController.m */; };
-		94AD97C918EFE2FA0001C695 /* HALServerInformationPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C318EF14650001C695 /* HALServerInformationPanel.m */; };
+		94AD97C418EF14650001C695 /* ServerInformationPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C318EF14650001C695 /* ServerInformationPanel.m */; };
+		94AD97C718EF16F50001C695 /* MonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C618EF16F50001C695 /* MonitorViewController.m */; };
+		94AD97C818EF16FE0001C695 /* MonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C618EF16F50001C695 /* MonitorViewController.m */; };
+		94AD97C918EFE2FA0001C695 /* ServerInformationPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD97C318EF14650001C695 /* ServerInformationPanel.m */; };
 		94CE065E19163D6C005D8D96 /* Spectator-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 940A202A18EBD89C00620F45 /* Spectator-Info.plist */; };
-		94D6EEC618EDD2C100740F04 /* HALConnectionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC518EDD2C100740F04 /* HALConnectionRecord.m */; };
-		94D6EEC918EDEA8500740F04 /* HALConnectionsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC818EDEA8500740F04 /* HALConnectionsRecorder.m */; };
-		94D6EECC18EDF44500740F04 /* HALConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EECB18EDF44500740F04 /* HALConnectionsViewController.m */; };
-		94D6EED118EE77F200740F04 /* HALConnectionsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EED018EE77F200740F04 /* HALConnectionsTableCell.m */; };
-		94D856DD18FAD0310097C385 /* HALServerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D856DC18FAD0310097C385 /* HALServerEditViewController.m */; };
-		94D856DE18FAD0310097C385 /* HALServerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D856DC18FAD0310097C385 /* HALServerEditViewController.m */; };
+		94D6EEC618EDD2C100740F04 /* SRVConnectionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */; };
+		94D6EEC918EDEA8500740F04 /* SRVConnectionsRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */; };
+		94D6EECC18EDF44500740F04 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EECB18EDF44500740F04 /* ConnectionsViewController.m */; };
+		94D6EED118EE77F200740F04 /* ConnectionsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EED018EE77F200740F04 /* ConnectionsTableCell.m */; };
+		94D856DD18FAD0310097C385 /* ServerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D856DC18FAD0310097C385 /* ServerEditViewController.m */; };
+		94D856DE18FAD0310097C385 /* ServerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D856DC18FAD0310097C385 /* ServerEditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,8 +210,8 @@
 		940A202C18EBD89C00620F45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		940A202E18EBD89C00620F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		940A203018EBD89C00620F45 /* Spectator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spectator-Prefix.pch"; sourceTree = "<group>"; };
-		940A203118EBD89C00620F45 /* HALApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HALApplicationDelegate.h; sourceTree = "<group>"; };
-		940A203218EBD89C00620F45 /* HALApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HALApplicationDelegate.m; sourceTree = "<group>"; };
+		940A203118EBD89C00620F45 /* ApplicationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationDelegate.h; sourceTree = "<group>"; };
+		940A203218EBD89C00620F45 /* ApplicationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationDelegate.m; sourceTree = "<group>"; };
 		940A203418EBD89C00620F45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Spectator/Images.xcassets; sourceTree = "<group>"; };
 		940A203A18EBD89C00620F45 /* SpectatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		940A203B18EBD89C00620F45 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -221,22 +220,22 @@
 		940A204718EBD89C00620F45 /* SpectatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpectatorTests.m; sourceTree = "<group>"; };
 		94175D0F18F6DAD800DB14B7 /* CircleGraphLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CircleGraphLayer.png; path = ../Images/CircleGraph/CircleGraphLayer.png; sourceTree = "<group>"; };
 		94175D1118F6DE5F00DB14B7 /* CircleGraphBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CircleGraphBackground.png; path = ../Images/CircleGraph/CircleGraphBackground.png; sourceTree = "<group>"; };
-		94175D1518F6E2E200DB14B7 /* HALMount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMount.h; sourceTree = "<group>"; };
-		94175D1618F6E2E200DB14B7 /* HALMount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMount.m; sourceTree = "<group>"; };
-		94175D1918F71DAB00DB14B7 /* HALMountPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMountPanel.h; sourceTree = "<group>"; };
-		94175D1A18F71DAB00DB14B7 /* HALMountPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMountPanel.m; sourceTree = "<group>"; };
-		94175D2B18F965A800DB14B7 /* HALMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMainViewController.h; sourceTree = "<group>"; };
-		94175D2C18F965A800DB14B7 /* HALMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMainViewController.m; sourceTree = "<group>"; };
-		943BAB8118EBE76E00A44CBD /* HALServersTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServersTable.h; sourceTree = "<group>"; };
-		943BAB8218EBE76E00A44CBD /* HALServersTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServersTable.m; sourceTree = "<group>"; };
+		94175D1518F6E2E200DB14B7 /* SRVMountRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVMountRecord.h; sourceTree = "<group>"; };
+		94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVMountRecord.m; sourceTree = "<group>"; };
+		94175D1918F71DAB00DB14B7 /* MountPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountPanel.h; sourceTree = "<group>"; };
+		94175D1A18F71DAB00DB14B7 /* MountPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountPanel.m; sourceTree = "<group>"; };
+		94175D2B18F965A800DB14B7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		94175D2C18F965A800DB14B7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		943BAB8118EBE76E00A44CBD /* ServersTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServersTable.h; sourceTree = "<group>"; };
+		943BAB8218EBE76E00A44CBD /* ServersTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServersTable.m; sourceTree = "<group>"; };
 		943BAB9218EC35FB00A44CBD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		943BAB9318EC35FB00A44CBD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		944EF21918EC3EC20047E519 /* HALServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServer.h; sourceTree = "<group>"; };
-		944EF21A18EC3EC20047E519 /* HALServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServer.m; sourceTree = "<group>"; };
-		944EF21C18EC3FD70047E519 /* HALServerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServerPool.h; sourceTree = "<group>"; };
-		944EF21D18EC3FD70047E519 /* HALServerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServerPool.m; sourceTree = "<group>"; };
-		944EF22118EC479F0047E519 /* HALServersTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServersTableCell.h; sourceTree = "<group>"; };
-		944EF22218EC479F0047E519 /* HALServersTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServersTableCell.m; sourceTree = "<group>"; };
+		944EF21918EC3EC20047E519 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		944EF21A18EC3EC20047E519 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		944EF21C18EC3FD70047E519 /* ServerPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerPool.h; sourceTree = "<group>"; };
+		944EF21D18EC3FD70047E519 /* ServerPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerPool.m; sourceTree = "<group>"; };
+		944EF22118EC479F0047E519 /* ServersTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServersTableCell.h; sourceTree = "<group>"; };
+		944EF22218EC479F0047E519 /* ServersTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServersTableCell.m; sourceTree = "<group>"; };
 		944EF22A18EC6AC60047E519 /* Spectator Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spectator Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944EF23018EC6AC60047E519 /* Spectator Lite-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spectator Lite-Info.plist"; sourceTree = "<group>"; };
 		944EF23418EC6AC60047E519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -245,8 +244,6 @@
 		944EF24818EC6AC70047E519 /* Spectator LiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spectator LiteTests-Info.plist"; sourceTree = "<group>"; };
 		944EF24A18EC6AC70047E519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		944EF24C18EC6AC70047E519 /* Spectator_LiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spectator_LiteTests.m; sourceTree = "<group>"; };
-		944EF26218ED49010047E519 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = ../../CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		944EF26318ED49010047E519 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = ../../CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		944FD5011901CAB600B16C60 /* ActionButton-Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ActionButton-Delete.png"; path = "../Images/ServerList/ActionButton-Delete.png"; sourceTree = "<group>"; };
 		944FD5021901CAB600B16C60 /* ActionButton-Edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ActionButton-Edit.png"; path = "../Images/ServerList/ActionButton-Edit.png"; sourceTree = "<group>"; };
 		944FD5031901CAB600B16C60 /* ActionButton-Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ActionButton-Pause.png"; path = "../Images/ServerList/ActionButton-Pause.png"; sourceTree = "<group>"; };
@@ -255,20 +252,20 @@
 		944FD5101901CB9100B16C60 /* ServerList-AccessoryButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ServerList-AccessoryButton@2x.png"; path = "../Images/ServerList/ServerList-AccessoryButton@2x.png"; sourceTree = "<group>"; };
 		944FD5141901CDF900B16C60 /* Network-StartGaging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Network-StartGaging.png"; path = "../Images/Network/Network-StartGaging.png"; sourceTree = "<group>"; };
 		944FD5171901D1E900B16C60 /* Network-StopGaging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Network-StopGaging.png"; path = "../Images/Network/Network-StopGaging.png"; sourceTree = "<group>"; };
-		94536FC9190DA04B00960E5F /* HALCpuDetailsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuDetailsPanel.h; sourceTree = "<group>"; };
-		94536FCA190DA04B00960E5F /* HALCpuDetailsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuDetailsPanel.m; sourceTree = "<group>"; };
-		94536FD1190DA0B800960E5F /* HALCpuDetailsBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuDetailsBarGraph.h; sourceTree = "<group>"; };
-		94536FD2190DA0B800960E5F /* HALCpuDetailsBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuDetailsBarGraph.m; sourceTree = "<group>"; };
-		94536FD5190E1EDB00960E5F /* HALMemoryPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMemoryPanel.h; sourceTree = "<group>"; };
-		94536FD6190E1EDB00960E5F /* HALMemoryPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMemoryPanel.m; sourceTree = "<group>"; };
-		94536FD9190E1EF400960E5F /* HALSwapPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALSwapPanel.h; sourceTree = "<group>"; };
-		94536FDA190E1EF500960E5F /* HALSwapPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALSwapPanel.m; sourceTree = "<group>"; };
-		94536FDD190E223700960E5F /* HALPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALPanel.h; sourceTree = "<group>"; };
-		94536FDE190E223700960E5F /* HALPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALPanel.m; sourceTree = "<group>"; };
-		94536FE1190FBEB300960E5F /* HALCpuGraphPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuGraphPanel.h; sourceTree = "<group>"; };
-		94536FE2190FBEB300960E5F /* HALCpuGraphPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuGraphPanel.m; sourceTree = "<group>"; };
-		9454AD8C18F014860046A2E9 /* HALProcessorsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALProcessorsRecorder.h; sourceTree = "<group>"; };
-		9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALProcessorsRecorder.m; sourceTree = "<group>"; };
+		94536FC9190DA04B00960E5F /* CpuDetailsPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuDetailsPanel.h; sourceTree = "<group>"; };
+		94536FCA190DA04B00960E5F /* CpuDetailsPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuDetailsPanel.m; sourceTree = "<group>"; };
+		94536FD1190DA0B800960E5F /* CpuDetailsBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuDetailsBarGraph.h; sourceTree = "<group>"; };
+		94536FD2190DA0B800960E5F /* CpuDetailsBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuDetailsBarGraph.m; sourceTree = "<group>"; };
+		94536FD5190E1EDB00960E5F /* MemoryPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryPanel.h; sourceTree = "<group>"; };
+		94536FD6190E1EDB00960E5F /* MemoryPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryPanel.m; sourceTree = "<group>"; };
+		94536FD9190E1EF400960E5F /* SwapPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwapPanel.h; sourceTree = "<group>"; };
+		94536FDA190E1EF500960E5F /* SwapPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwapPanel.m; sourceTree = "<group>"; };
+		94536FDD190E223700960E5F /* Panel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Panel.h; sourceTree = "<group>"; };
+		94536FDE190E223700960E5F /* Panel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Panel.m; sourceTree = "<group>"; };
+		94536FE1190FBEB300960E5F /* CpuGraphPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuGraphPanel.h; sourceTree = "<group>"; };
+		94536FE2190FBEB300960E5F /* CpuGraphPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuGraphPanel.m; sourceTree = "<group>"; };
+		9454AD8C18F014860046A2E9 /* SRVProcessorsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVProcessorsRecorder.h; sourceTree = "<group>"; };
+		9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVProcessorsRecorder.m; sourceTree = "<group>"; };
 		945D5BB119045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		945D5BB219045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		945D5BB319045D9100C36A2D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -278,26 +275,28 @@
 		945ECB9219A48D7F0097DC0A /* BarGraphPanelPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BarGraphPanelPad@2x.png"; path = "../Images/BarGraph/BarGraphPanelPad@2x.png"; sourceTree = "<group>"; };
 		94613832190FDD12006F18DA /* CPUGraphBackgroundPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CPUGraphBackgroundPad.png; path = ../Images/CPU/CPUGraphBackgroundPad.png; sourceTree = "<group>"; };
 		94613833190FDD12006F18DA /* CPUGraphBackgroundPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CPUGraphBackgroundPhone.png; path = ../Images/CPU/CPUGraphBackgroundPhone.png; sourceTree = "<group>"; };
-		9461383619111E7F006F18DA /* HALPanelTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALPanelTableView.h; sourceTree = "<group>"; };
-		9461383719111E7F006F18DA /* HALPanelTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALPanelTableView.m; sourceTree = "<group>"; };
-		9461383A19111EAE006F18DA /* HALPanelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALPanelTableViewCell.h; sourceTree = "<group>"; };
-		9461383B19111EAE006F18DA /* HALPanelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALPanelTableViewCell.m; sourceTree = "<group>"; };
-		9473C7921912BF9F008CD056 /* HALBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALBarGraph.h; sourceTree = "<group>"; };
-		9473C7931912BF9F008CD056 /* HALBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALBarGraph.m; sourceTree = "<group>"; };
-		9473C7961912CBCA008CD056 /* HALBarGraphBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALBarGraphBlock.h; sourceTree = "<group>"; };
-		9473C7971912CBCA008CD056 /* HALBarGraphBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALBarGraphBlock.m; sourceTree = "<group>"; };
-		9473C79A1912CD3F008CD056 /* HALMemoryRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMemoryRecorder.h; sourceTree = "<group>"; };
-		9473C79B1912CD3F008CD056 /* HALMemoryRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMemoryRecorder.m; sourceTree = "<group>"; };
-		9473C79E1912CE0A008CD056 /* HALSwapRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALSwapRecorder.h; sourceTree = "<group>"; };
-		9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALSwapRecorder.m; sourceTree = "<group>"; };
-		9473C7A2191505C6008CD056 /* HALResourceRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALResourceRecorder.h; sourceTree = "<group>"; };
-		9473C7A3191505C6008CD056 /* HALResourceRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALResourceRecorder.m; sourceTree = "<group>"; };
-		94772EA319CC1B350095DD1B /* HALDesigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALDesigner.h; sourceTree = "<group>"; };
-		94772EA419CC1B350095DD1B /* HALDesigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALDesigner.m; sourceTree = "<group>"; };
-		947D8E1F18F55CA400C48954 /* HALCpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuViewController.h; sourceTree = "<group>"; };
-		947D8E2018F55CA400C48954 /* HALCpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuViewController.m; sourceTree = "<group>"; };
-		9486E56018FFC1BD00E174C5 /* HALMonitorTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMonitorTabBarController.h; sourceTree = "<group>"; };
-		9486E56118FFC1BD00E174C5 /* HALMonitorTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMonitorTabBarController.m; sourceTree = "<group>"; };
+		9461383619111E7F006F18DA /* PanelTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelTableView.h; sourceTree = "<group>"; };
+		9461383719111E7F006F18DA /* PanelTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelTableView.m; sourceTree = "<group>"; };
+		9461383A19111EAE006F18DA /* PanelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelTableViewCell.h; sourceTree = "<group>"; };
+		9461383B19111EAE006F18DA /* PanelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelTableViewCell.m; sourceTree = "<group>"; };
+		9473C7921912BF9F008CD056 /* BarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarGraph.h; sourceTree = "<group>"; };
+		9473C7931912BF9F008CD056 /* BarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarGraph.m; sourceTree = "<group>"; };
+		9473C7961912CBCA008CD056 /* BarGraphBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarGraphBlock.h; sourceTree = "<group>"; };
+		9473C7971912CBCA008CD056 /* BarGraphBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarGraphBlock.m; sourceTree = "<group>"; };
+		9473C79A1912CD3F008CD056 /* SRVMemoryRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVMemoryRecorder.h; sourceTree = "<group>"; };
+		9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVMemoryRecorder.m; sourceTree = "<group>"; };
+		9473C79E1912CE0A008CD056 /* SRVSwapRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVSwapRecorder.h; sourceTree = "<group>"; };
+		9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVSwapRecorder.m; sourceTree = "<group>"; };
+		9473C7A2191505C6008CD056 /* SRVResourceRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVResourceRecorder.h; sourceTree = "<group>"; };
+		9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVResourceRecorder.m; sourceTree = "<group>"; };
+		94772EA319CC1B350095DD1B /* Designer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
+		94772EA419CC1B350095DD1B /* Designer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designer.m; sourceTree = "<group>"; };
+		94772EA719CC3D210095DD1B /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = ../../GitHub/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = ../../GitHub/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		947D8E1F18F55CA400C48954 /* CpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuViewController.h; sourceTree = "<group>"; };
+		947D8E2018F55CA400C48954 /* CpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuViewController.m; sourceTree = "<group>"; };
+		9486E56018FFC1BD00E174C5 /* MonitorTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorTabBarController.h; sourceTree = "<group>"; };
+		9486E56118FFC1BD00E174C5 /* MonitorTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorTabBarController.m; sourceTree = "<group>"; };
 		9486E56A190008BA00E174C5 /* TabBarButton-CPU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarButton-CPU.png"; path = "../Images/TabBar/TabBarButton-CPU.png"; sourceTree = "<group>"; };
 		9486E5701900094300E174C5 /* TabBarButton-CPU@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarButton-CPU@2x.png"; path = "../Images/TabBar/TabBarButton-CPU@2x.png"; sourceTree = "<group>"; };
 		9486E573190026A200E174C5 /* TabBarButton-Mounts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarButton-Mounts.png"; path = "../Images/TabBar/TabBarButton-Mounts.png"; sourceTree = "<group>"; };
@@ -312,46 +311,46 @@
 		9486E58F19003A6900E174C5 /* NavBarButton-Stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavBarButton-Stop@2x.png"; path = "../Images/NavBar/NavBarButton-Stop@2x.png"; sourceTree = "<group>"; };
 		9486E594190068CB00E174C5 /* NavBarButton-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavBarButton-Back.png"; path = "../Images/NavBar/NavBarButton-Back.png"; sourceTree = "<group>"; };
 		9486E595190068CB00E174C5 /* NavBarButton-Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavBarButton-Back@2x.png"; path = "../Images/NavBar/NavBarButton-Back@2x.png"; sourceTree = "<group>"; };
-		9486E5A619017D1200E174C5 /* HALNetworkRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALNetworkRecorder.h; sourceTree = "<group>"; };
-		9486E5A719017D1200E174C5 /* HALNetworkRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALNetworkRecorder.m; sourceTree = "<group>"; };
-		9486E5AA19017D2900E174C5 /* HALNetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALNetworkInterface.h; sourceTree = "<group>"; };
-		9486E5AB19017D2900E174C5 /* HALNetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALNetworkInterface.m; sourceTree = "<group>"; };
-		9486E5AE19017F2500E174C5 /* HALNetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALNetworkViewController.h; sourceTree = "<group>"; };
-		9486E5AF19017F2500E174C5 /* HALNetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALNetworkViewController.m; sourceTree = "<group>"; };
+		9486E5A619017D1200E174C5 /* SRVNetworkRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVNetworkRecorder.h; sourceTree = "<group>"; };
+		9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVNetworkRecorder.m; sourceTree = "<group>"; };
+		9486E5AA19017D2900E174C5 /* SRVNetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVNetworkInterface.h; sourceTree = "<group>"; };
+		9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVNetworkInterface.m; sourceTree = "<group>"; };
+		9486E5AE19017F2500E174C5 /* NetworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkViewController.h; sourceTree = "<group>"; };
+		9486E5AF19017F2500E174C5 /* NetworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkViewController.m; sourceTree = "<group>"; };
 		9486E5B21901853E00E174C5 /* TabBarButton-Network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarButton-Network.png"; path = "../Images/TabBar/TabBarButton-Network.png"; sourceTree = "<group>"; };
 		9486E5B31901853E00E174C5 /* TabBarButton-Network@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabBarButton-Network@2x.png"; path = "../Images/TabBar/TabBarButton-Network@2x.png"; sourceTree = "<group>"; };
-		9486E5B81901923000E174C5 /* HALNetworkInterfacePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALNetworkInterfacePanel.h; sourceTree = "<group>"; };
-		9486E5B91901923000E174C5 /* HALNetworkInterfacePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALNetworkInterfacePanel.m; sourceTree = "<group>"; };
-		948D85C418F0600A00DDDB5A /* HALProcessorUsageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALProcessorUsageRecord.h; sourceTree = "<group>"; };
-		948D85C518F0600A00DDDB5A /* HALProcessorUsageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALProcessorUsageRecord.m; sourceTree = "<group>"; };
-		948D85C818F064AF00DDDB5A /* HALCpuGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALCpuGraph.h; sourceTree = "<group>"; };
-		948D85C918F064AF00DDDB5A /* HALCpuGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALCpuGraph.m; sourceTree = "<group>"; };
-		948D85D218F19A2200DDDB5A /* HALMountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMountsViewController.h; sourceTree = "<group>"; };
-		948D85D318F19A2200DDDB5A /* HALMountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMountsViewController.m; sourceTree = "<group>"; };
-		948D85E418F2DE2100DDDB5A /* HALDiskUsageGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALDiskUsageGraph.h; sourceTree = "<group>"; };
-		948D85E518F2DE2100DDDB5A /* HALDiskUsageGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALDiskUsageGraph.m; sourceTree = "<group>"; };
-		948D85E818F2DF1800DDDB5A /* HALMountsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMountsRecorder.h; sourceTree = "<group>"; };
-		948D85E918F2DF1800DDDB5A /* HALMountsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMountsRecorder.m; sourceTree = "<group>"; };
+		9486E5B81901923000E174C5 /* NetworkInterfacePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterfacePanel.h; sourceTree = "<group>"; };
+		9486E5B91901923000E174C5 /* NetworkInterfacePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfacePanel.m; sourceTree = "<group>"; };
+		948D85C418F0600A00DDDB5A /* SRVProcessorUsageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVProcessorUsageRecord.h; sourceTree = "<group>"; };
+		948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVProcessorUsageRecord.m; sourceTree = "<group>"; };
+		948D85C818F064AF00DDDB5A /* CpuGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuGraph.h; sourceTree = "<group>"; };
+		948D85C918F064AF00DDDB5A /* CpuGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuGraph.m; sourceTree = "<group>"; };
+		948D85D218F19A2200DDDB5A /* MountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountsViewController.h; sourceTree = "<group>"; };
+		948D85D318F19A2200DDDB5A /* MountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountsViewController.m; sourceTree = "<group>"; };
+		948D85E418F2DE2100DDDB5A /* DiskUsageGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiskUsageGraph.h; sourceTree = "<group>"; };
+		948D85E518F2DE2100DDDB5A /* DiskUsageGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiskUsageGraph.m; sourceTree = "<group>"; };
+		948D85E818F2DF1800DDDB5A /* SRVMountsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVMountsRecorder.h; sourceTree = "<group>"; };
+		948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVMountsRecorder.m; sourceTree = "<group>"; };
 		949197C919056768006042DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Introduction.strings; sourceTree = "<group>"; };
 		949197CB1905676C006042DF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Introduction.strings; sourceTree = "<group>"; };
 		949197CD1905676E006042DF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Introduction.strings; sourceTree = "<group>"; };
 		949197CE1905676F006042DF /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Introduction.strings; sourceTree = "<group>"; };
-		949197D019057039006042DF /* HALIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALIntroductionViewController.h; sourceTree = "<group>"; };
-		949197D119057039006042DF /* HALIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALIntroductionViewController.m; sourceTree = "<group>"; };
+		949197D019057039006042DF /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
+		949197D119057039006042DF /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
 		94AD97BE18EEAAFA0001C695 /* InetConnectionAppeared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InetConnectionAppeared.png; path = ../Images/InetConnections/InetConnectionAppeared.png; sourceTree = "<group>"; };
 		94AD97BF18EEAAFA0001C695 /* InetConnectionDisappeared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InetConnectionDisappeared.png; path = ../Images/InetConnections/InetConnectionDisappeared.png; sourceTree = "<group>"; };
-		94AD97C218EF14650001C695 /* HALServerInformationPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServerInformationPanel.h; sourceTree = "<group>"; };
-		94AD97C318EF14650001C695 /* HALServerInformationPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServerInformationPanel.m; sourceTree = "<group>"; };
-		94AD97C518EF16F50001C695 /* HALMonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALMonitorViewController.h; sourceTree = "<group>"; };
-		94AD97C618EF16F50001C695 /* HALMonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALMonitorViewController.m; sourceTree = "<group>"; };
-		94D6EEC418EDD2C100740F04 /* HALConnectionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALConnectionRecord.h; sourceTree = "<group>"; };
-		94D6EEC518EDD2C100740F04 /* HALConnectionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALConnectionRecord.m; sourceTree = "<group>"; };
-		94D6EEC718EDEA8500740F04 /* HALConnectionsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALConnectionsRecorder.h; sourceTree = "<group>"; };
-		94D6EEC818EDEA8500740F04 /* HALConnectionsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALConnectionsRecorder.m; sourceTree = "<group>"; };
-		94D6EECA18EDF44500740F04 /* HALConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALConnectionsViewController.h; sourceTree = "<group>"; };
-		94D6EECB18EDF44500740F04 /* HALConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALConnectionsViewController.m; sourceTree = "<group>"; };
-		94D6EECF18EE77F200740F04 /* HALConnectionsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALConnectionsTableCell.h; sourceTree = "<group>"; };
-		94D6EED018EE77F200740F04 /* HALConnectionsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALConnectionsTableCell.m; sourceTree = "<group>"; };
+		94AD97C218EF14650001C695 /* ServerInformationPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerInformationPanel.h; sourceTree = "<group>"; };
+		94AD97C318EF14650001C695 /* ServerInformationPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerInformationPanel.m; sourceTree = "<group>"; };
+		94AD97C518EF16F50001C695 /* MonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorViewController.h; sourceTree = "<group>"; };
+		94AD97C618EF16F50001C695 /* MonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonitorViewController.m; sourceTree = "<group>"; };
+		94D6EEC418EDD2C100740F04 /* SRVConnectionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVConnectionRecord.h; sourceTree = "<group>"; };
+		94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVConnectionRecord.m; sourceTree = "<group>"; };
+		94D6EEC718EDEA8500740F04 /* SRVConnectionsRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRVConnectionsRecorder.h; sourceTree = "<group>"; };
+		94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVConnectionsRecorder.m; sourceTree = "<group>"; };
+		94D6EECA18EDF44500740F04 /* ConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsViewController.h; sourceTree = "<group>"; };
+		94D6EECB18EDF44500740F04 /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
+		94D6EECF18EE77F200740F04 /* ConnectionsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsTableCell.h; sourceTree = "<group>"; };
+		94D6EED018EE77F200740F04 /* ConnectionsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsTableCell.m; sourceTree = "<group>"; };
 		94D856D218FABB780097C385 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94D856D318FABB790097C385 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94D856D418FABB790097C385 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -361,8 +360,8 @@
 		94D856D818FAC4820097C385 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94D856D918FAC4820097C385 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94D856DA18FAC4820097C385 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		94D856DB18FAD0310097C385 /* HALServerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HALServerEditViewController.h; sourceTree = "<group>"; };
-		94D856DC18FAD0310097C385 /* HALServerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HALServerEditViewController.m; sourceTree = "<group>"; };
+		94D856DB18FAD0310097C385 /* ServerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerEditViewController.h; sourceTree = "<group>"; };
+		94D856DC18FAD0310097C385 /* ServerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerEditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,12 +411,12 @@
 		940A201618EBD89C00620F45 = {
 			isa = PBXGroup;
 			children = (
-				940A203118EBD89C00620F45 /* HALApplicationDelegate.h */,
-				940A203218EBD89C00620F45 /* HALApplicationDelegate.m */,
+				940A203118EBD89C00620F45 /* ApplicationDelegate.h */,
+				940A203218EBD89C00620F45 /* ApplicationDelegate.m */,
 				94175D2A18F9658C00DB14B7 /* Main */,
 				94D6EECD18EDF47000740F04 /* Monitor */,
 				94D6EECE18EDF49200740F04 /* Server */,
-				94772EA219CC1A630095DD1B /* External */,
+				94772EA219CC1A630095DD1B /* Cocoa */,
 				940A203418EBD89C00620F45 /* Images.xcassets */,
 				944EF25418EC6AFF0047E519 /* Localizations */,
 				944EF25C18EC6BB20047E519 /* Images */,
@@ -506,18 +505,18 @@
 		94175D2A18F9658C00DB14B7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				94772EA319CC1B350095DD1B /* HALDesigner.h */,
-				94772EA419CC1B350095DD1B /* HALDesigner.m */,
-				94175D2B18F965A800DB14B7 /* HALMainViewController.h */,
-				94175D2C18F965A800DB14B7 /* HALMainViewController.m */,
-				943BAB8118EBE76E00A44CBD /* HALServersTable.h */,
-				943BAB8218EBE76E00A44CBD /* HALServersTable.m */,
-				944EF22118EC479F0047E519 /* HALServersTableCell.h */,
-				944EF22218EC479F0047E519 /* HALServersTableCell.m */,
-				94D856DB18FAD0310097C385 /* HALServerEditViewController.h */,
-				94D856DC18FAD0310097C385 /* HALServerEditViewController.m */,
-				949197D019057039006042DF /* HALIntroductionViewController.h */,
-				949197D119057039006042DF /* HALIntroductionViewController.m */,
+				94772EA319CC1B350095DD1B /* Designer.h */,
+				94772EA419CC1B350095DD1B /* Designer.m */,
+				94175D2B18F965A800DB14B7 /* MainViewController.h */,
+				94175D2C18F965A800DB14B7 /* MainViewController.m */,
+				943BAB8118EBE76E00A44CBD /* ServersTable.h */,
+				943BAB8218EBE76E00A44CBD /* ServersTable.m */,
+				944EF22118EC479F0047E519 /* ServersTableCell.h */,
+				944EF22218EC479F0047E519 /* ServersTableCell.m */,
+				94D856DB18FAD0310097C385 /* ServerEditViewController.h */,
+				94D856DC18FAD0310097C385 /* ServerEditViewController.m */,
+				949197D019057039006042DF /* IntroductionViewController.h */,
+				949197D119057039006042DF /* IntroductionViewController.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -622,22 +621,22 @@
 		94536FCD190DA05800960E5F /* CpuRam */ = {
 			isa = PBXGroup;
 			children = (
-				947D8E1F18F55CA400C48954 /* HALCpuViewController.h */,
-				947D8E2018F55CA400C48954 /* HALCpuViewController.m */,
-				94AD97C218EF14650001C695 /* HALServerInformationPanel.h */,
-				94AD97C318EF14650001C695 /* HALServerInformationPanel.m */,
-				94536FE1190FBEB300960E5F /* HALCpuGraphPanel.h */,
-				94536FE2190FBEB300960E5F /* HALCpuGraphPanel.m */,
-				948D85C818F064AF00DDDB5A /* HALCpuGraph.h */,
-				948D85C918F064AF00DDDB5A /* HALCpuGraph.m */,
-				94536FC9190DA04B00960E5F /* HALCpuDetailsPanel.h */,
-				94536FCA190DA04B00960E5F /* HALCpuDetailsPanel.m */,
-				94536FD1190DA0B800960E5F /* HALCpuDetailsBarGraph.h */,
-				94536FD2190DA0B800960E5F /* HALCpuDetailsBarGraph.m */,
-				94536FD5190E1EDB00960E5F /* HALMemoryPanel.h */,
-				94536FD6190E1EDB00960E5F /* HALMemoryPanel.m */,
-				94536FD9190E1EF400960E5F /* HALSwapPanel.h */,
-				94536FDA190E1EF500960E5F /* HALSwapPanel.m */,
+				947D8E1F18F55CA400C48954 /* CpuViewController.h */,
+				947D8E2018F55CA400C48954 /* CpuViewController.m */,
+				94AD97C218EF14650001C695 /* ServerInformationPanel.h */,
+				94AD97C318EF14650001C695 /* ServerInformationPanel.m */,
+				94536FE1190FBEB300960E5F /* CpuGraphPanel.h */,
+				94536FE2190FBEB300960E5F /* CpuGraphPanel.m */,
+				948D85C818F064AF00DDDB5A /* CpuGraph.h */,
+				948D85C918F064AF00DDDB5A /* CpuGraph.m */,
+				94536FC9190DA04B00960E5F /* CpuDetailsPanel.h */,
+				94536FCA190DA04B00960E5F /* CpuDetailsPanel.m */,
+				94536FD1190DA0B800960E5F /* CpuDetailsBarGraph.h */,
+				94536FD2190DA0B800960E5F /* CpuDetailsBarGraph.m */,
+				94536FD5190E1EDB00960E5F /* MemoryPanel.h */,
+				94536FD6190E1EDB00960E5F /* MemoryPanel.m */,
+				94536FD9190E1EF400960E5F /* SwapPanel.h */,
+				94536FDA190E1EF500960E5F /* SwapPanel.m */,
 			);
 			name = CpuRam;
 			sourceTree = "<group>";
@@ -645,12 +644,12 @@
 		94536FCE190DA06A00960E5F /* Mounts */ = {
 			isa = PBXGroup;
 			children = (
-				948D85D218F19A2200DDDB5A /* HALMountsViewController.h */,
-				948D85D318F19A2200DDDB5A /* HALMountsViewController.m */,
-				94175D1918F71DAB00DB14B7 /* HALMountPanel.h */,
-				94175D1A18F71DAB00DB14B7 /* HALMountPanel.m */,
-				948D85E418F2DE2100DDDB5A /* HALDiskUsageGraph.h */,
-				948D85E518F2DE2100DDDB5A /* HALDiskUsageGraph.m */,
+				948D85D218F19A2200DDDB5A /* MountsViewController.h */,
+				948D85D318F19A2200DDDB5A /* MountsViewController.m */,
+				94175D1918F71DAB00DB14B7 /* MountPanel.h */,
+				94175D1A18F71DAB00DB14B7 /* MountPanel.m */,
+				948D85E418F2DE2100DDDB5A /* DiskUsageGraph.h */,
+				948D85E518F2DE2100DDDB5A /* DiskUsageGraph.m */,
 			);
 			name = Mounts;
 			sourceTree = "<group>";
@@ -658,10 +657,10 @@
 		94536FCF190DA07A00960E5F /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9486E5AE19017F2500E174C5 /* HALNetworkViewController.h */,
-				9486E5AF19017F2500E174C5 /* HALNetworkViewController.m */,
-				9486E5B81901923000E174C5 /* HALNetworkInterfacePanel.h */,
-				9486E5B91901923000E174C5 /* HALNetworkInterfacePanel.m */,
+				9486E5AE19017F2500E174C5 /* NetworkViewController.h */,
+				9486E5AF19017F2500E174C5 /* NetworkViewController.m */,
+				9486E5B81901923000E174C5 /* NetworkInterfacePanel.h */,
+				9486E5B91901923000E174C5 /* NetworkInterfacePanel.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -669,10 +668,10 @@
 		94536FD0190DA08100960E5F /* Connections */ = {
 			isa = PBXGroup;
 			children = (
-				94D6EECA18EDF44500740F04 /* HALConnectionsViewController.h */,
-				94D6EECB18EDF44500740F04 /* HALConnectionsViewController.m */,
-				94D6EECF18EE77F200740F04 /* HALConnectionsTableCell.h */,
-				94D6EED018EE77F200740F04 /* HALConnectionsTableCell.m */,
+				94D6EECA18EDF44500740F04 /* ConnectionsViewController.h */,
+				94D6EECB18EDF44500740F04 /* ConnectionsViewController.m */,
+				94D6EECF18EE77F200740F04 /* ConnectionsTableCell.h */,
+				94D6EED018EE77F200740F04 /* ConnectionsTableCell.m */,
 			);
 			name = Connections;
 			sourceTree = "<group>";
@@ -688,13 +687,20 @@
 			name = BarGraph;
 			sourceTree = "<group>";
 		};
-		94772EA219CC1A630095DD1B /* External */ = {
+		9469D2D119CDAA42002530B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				944EF26218ED49010047E519 /* GCDAsyncSocket.h */,
-				944EF26318ED49010047E519 /* GCDAsyncSocket.m */,
 			);
-			name = External;
+			name = Services;
+			sourceTree = "<group>";
+		};
+		94772EA219CC1A630095DD1B /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				94772EA719CC3D210095DD1B /* GCDAsyncSocket.h */,
+				94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */,
+			);
+			name = Cocoa;
 			sourceTree = "<group>";
 		};
 		948D85EC18F3087800DDDB5A /* CircleGraph */ = {
@@ -718,20 +724,20 @@
 		94D6EECD18EDF47000740F04 /* Monitor */ = {
 			isa = PBXGroup;
 			children = (
-				9486E56018FFC1BD00E174C5 /* HALMonitorTabBarController.h */,
-				9486E56118FFC1BD00E174C5 /* HALMonitorTabBarController.m */,
-				94AD97C518EF16F50001C695 /* HALMonitorViewController.h */,
-				94AD97C618EF16F50001C695 /* HALMonitorViewController.m */,
-				9461383619111E7F006F18DA /* HALPanelTableView.h */,
-				9461383719111E7F006F18DA /* HALPanelTableView.m */,
-				9461383A19111EAE006F18DA /* HALPanelTableViewCell.h */,
-				9461383B19111EAE006F18DA /* HALPanelTableViewCell.m */,
-				94536FDD190E223700960E5F /* HALPanel.h */,
-				94536FDE190E223700960E5F /* HALPanel.m */,
-				9473C7921912BF9F008CD056 /* HALBarGraph.h */,
-				9473C7931912BF9F008CD056 /* HALBarGraph.m */,
-				9473C7961912CBCA008CD056 /* HALBarGraphBlock.h */,
-				9473C7971912CBCA008CD056 /* HALBarGraphBlock.m */,
+				9486E56018FFC1BD00E174C5 /* MonitorTabBarController.h */,
+				9486E56118FFC1BD00E174C5 /* MonitorTabBarController.m */,
+				94AD97C518EF16F50001C695 /* MonitorViewController.h */,
+				94AD97C618EF16F50001C695 /* MonitorViewController.m */,
+				9461383619111E7F006F18DA /* PanelTableView.h */,
+				9461383719111E7F006F18DA /* PanelTableView.m */,
+				9461383A19111EAE006F18DA /* PanelTableViewCell.h */,
+				9461383B19111EAE006F18DA /* PanelTableViewCell.m */,
+				94536FDD190E223700960E5F /* Panel.h */,
+				94536FDE190E223700960E5F /* Panel.m */,
+				9473C7921912BF9F008CD056 /* BarGraph.h */,
+				9473C7931912BF9F008CD056 /* BarGraph.m */,
+				9473C7961912CBCA008CD056 /* BarGraphBlock.h */,
+				9473C7971912CBCA008CD056 /* BarGraphBlock.m */,
 				94536FCD190DA05800960E5F /* CpuRam */,
 				94536FCE190DA06A00960E5F /* Mounts */,
 				94536FCF190DA07A00960E5F /* Network */,
@@ -743,32 +749,33 @@
 		94D6EECE18EDF49200740F04 /* Server */ = {
 			isa = PBXGroup;
 			children = (
-				944EF21C18EC3FD70047E519 /* HALServerPool.h */,
-				944EF21D18EC3FD70047E519 /* HALServerPool.m */,
-				944EF21918EC3EC20047E519 /* HALServer.h */,
-				944EF21A18EC3EC20047E519 /* HALServer.m */,
-				9473C7A2191505C6008CD056 /* HALResourceRecorder.h */,
-				9473C7A3191505C6008CD056 /* HALResourceRecorder.m */,
-				9454AD8C18F014860046A2E9 /* HALProcessorsRecorder.h */,
-				9454AD8D18F014860046A2E9 /* HALProcessorsRecorder.m */,
-				948D85C418F0600A00DDDB5A /* HALProcessorUsageRecord.h */,
-				948D85C518F0600A00DDDB5A /* HALProcessorUsageRecord.m */,
-				9473C79A1912CD3F008CD056 /* HALMemoryRecorder.h */,
-				9473C79B1912CD3F008CD056 /* HALMemoryRecorder.m */,
-				9473C79E1912CE0A008CD056 /* HALSwapRecorder.h */,
-				9473C79F1912CE0A008CD056 /* HALSwapRecorder.m */,
-				948D85E818F2DF1800DDDB5A /* HALMountsRecorder.h */,
-				948D85E918F2DF1800DDDB5A /* HALMountsRecorder.m */,
-				94175D1518F6E2E200DB14B7 /* HALMount.h */,
-				94175D1618F6E2E200DB14B7 /* HALMount.m */,
-				9486E5A619017D1200E174C5 /* HALNetworkRecorder.h */,
-				9486E5A719017D1200E174C5 /* HALNetworkRecorder.m */,
-				9486E5AA19017D2900E174C5 /* HALNetworkInterface.h */,
-				9486E5AB19017D2900E174C5 /* HALNetworkInterface.m */,
-				94D6EEC718EDEA8500740F04 /* HALConnectionsRecorder.h */,
-				94D6EEC818EDEA8500740F04 /* HALConnectionsRecorder.m */,
-				94D6EEC418EDD2C100740F04 /* HALConnectionRecord.h */,
-				94D6EEC518EDD2C100740F04 /* HALConnectionRecord.m */,
+				944EF21C18EC3FD70047E519 /* ServerPool.h */,
+				944EF21D18EC3FD70047E519 /* ServerPool.m */,
+				944EF21918EC3EC20047E519 /* Server.h */,
+				944EF21A18EC3EC20047E519 /* Server.m */,
+				9469D2D119CDAA42002530B6 /* Services */,
+				9473C7A2191505C6008CD056 /* SRVResourceRecorder.h */,
+				9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */,
+				9454AD8C18F014860046A2E9 /* SRVProcessorsRecorder.h */,
+				9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */,
+				948D85C418F0600A00DDDB5A /* SRVProcessorUsageRecord.h */,
+				948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */,
+				9473C79A1912CD3F008CD056 /* SRVMemoryRecorder.h */,
+				9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */,
+				9473C79E1912CE0A008CD056 /* SRVSwapRecorder.h */,
+				9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */,
+				948D85E818F2DF1800DDDB5A /* SRVMountsRecorder.h */,
+				948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */,
+				94175D1518F6E2E200DB14B7 /* SRVMountRecord.h */,
+				94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */,
+				9486E5A619017D1200E174C5 /* SRVNetworkRecorder.h */,
+				9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */,
+				9486E5AA19017D2900E174C5 /* SRVNetworkInterface.h */,
+				9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */,
+				94D6EEC718EDEA8500740F04 /* SRVConnectionsRecorder.h */,
+				94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */,
+				94D6EEC418EDD2C100740F04 /* SRVConnectionRecord.h */,
+				94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -862,7 +869,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HAL;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Maxim Shchetynin";
 				TargetAttributes = {
 					940A201E18EBD89C00620F45 = {
@@ -944,7 +951,6 @@
 				940A202D18EBD89C00620F45 /* Localizable.strings in Resources */,
 				94AD97C018EEAAFA0001C695 /* InetConnectionAppeared.png in Resources */,
 				945ECB9319A48D7F0097DC0A /* BarGraphPanelPad@2x.png in Resources */,
-				943BAB8618EBE7AA00A44CBD /* Spectator-Info.plist in Resources */,
 				9486E57B1900295600E174C5 /* TabBarButton-Connections.png in Resources */,
 				945ECB8B19A383C20097DC0A /* BarGraphPanelPad.png in Resources */,
 			);
@@ -1014,50 +1020,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94536FCB190DA04B00960E5F /* HALCpuDetailsPanel.m in Sources */,
-				944EF26418ED49010047E519 /* GCDAsyncSocket.m in Sources */,
-				94AD97C418EF14650001C695 /* HALServerInformationPanel.m in Sources */,
-				940A203318EBD89C00620F45 /* HALApplicationDelegate.m in Sources */,
-				9454AD8E18F014860046A2E9 /* HALProcessorsRecorder.m in Sources */,
-				94175D1718F6E2E200DB14B7 /* HALMount.m in Sources */,
-				94D6EEC618EDD2C100740F04 /* HALConnectionRecord.m in Sources */,
-				9486E5AC19017D2900E174C5 /* HALNetworkInterface.m in Sources */,
-				9486E5B019017F2500E174C5 /* HALNetworkViewController.m in Sources */,
-				9473C7941912BF9F008CD056 /* HALBarGraph.m in Sources */,
-				94D856DD18FAD0310097C385 /* HALServerEditViewController.m in Sources */,
-				94536FD7190E1EDB00960E5F /* HALMemoryPanel.m in Sources */,
-				943BAB8318EBE76E00A44CBD /* HALServersTable.m in Sources */,
-				94536FE3190FBEB300960E5F /* HALCpuGraphPanel.m in Sources */,
-				9486E5BA1901923000E174C5 /* HALNetworkInterfacePanel.m in Sources */,
-				944EF21B18EC3EC20047E519 /* HALServer.m in Sources */,
-				94AD97C718EF16F50001C695 /* HALMonitorViewController.m in Sources */,
-				94536FDB190E1EF500960E5F /* HALSwapPanel.m in Sources */,
-				94175D1B18F71DAB00DB14B7 /* HALMountPanel.m in Sources */,
-				9461383C19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */,
-				94D6EED118EE77F200740F04 /* HALConnectionsTableCell.m in Sources */,
-				9486E56218FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */,
-				94772EA519CC1B350095DD1B /* HALDesigner.m in Sources */,
-				948D85D418F19A2200DDDB5A /* HALMountsViewController.m in Sources */,
+				94536FCB190DA04B00960E5F /* CpuDetailsPanel.m in Sources */,
+				94AD97C418EF14650001C695 /* ServerInformationPanel.m in Sources */,
+				940A203318EBD89C00620F45 /* ApplicationDelegate.m in Sources */,
+				9454AD8E18F014860046A2E9 /* SRVProcessorsRecorder.m in Sources */,
+				94175D1718F6E2E200DB14B7 /* SRVMountRecord.m in Sources */,
+				94D6EEC618EDD2C100740F04 /* SRVConnectionRecord.m in Sources */,
+				9486E5AC19017D2900E174C5 /* SRVNetworkInterface.m in Sources */,
+				9486E5B019017F2500E174C5 /* NetworkViewController.m in Sources */,
+				9473C7941912BF9F008CD056 /* BarGraph.m in Sources */,
+				94D856DD18FAD0310097C385 /* ServerEditViewController.m in Sources */,
+				94536FD7190E1EDB00960E5F /* MemoryPanel.m in Sources */,
+				943BAB8318EBE76E00A44CBD /* ServersTable.m in Sources */,
+				94536FE3190FBEB300960E5F /* CpuGraphPanel.m in Sources */,
+				9486E5BA1901923000E174C5 /* NetworkInterfacePanel.m in Sources */,
+				944EF21B18EC3EC20047E519 /* Server.m in Sources */,
+				94AD97C718EF16F50001C695 /* MonitorViewController.m in Sources */,
+				94536FDB190E1EF500960E5F /* SwapPanel.m in Sources */,
+				94175D1B18F71DAB00DB14B7 /* MountPanel.m in Sources */,
+				9461383C19111EAE006F18DA /* PanelTableViewCell.m in Sources */,
+				94D6EED118EE77F200740F04 /* ConnectionsTableCell.m in Sources */,
+				94772EA919CC3D210095DD1B /* GCDAsyncSocket.m in Sources */,
+				9486E56218FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */,
+				94772EA519CC1B350095DD1B /* Designer.m in Sources */,
+				948D85D418F19A2200DDDB5A /* MountsViewController.m in Sources */,
 				940A202F18EBD89C00620F45 /* main.m in Sources */,
-				9473C7A01912CE0A008CD056 /* HALSwapRecorder.m in Sources */,
-				94536FDF190E223700960E5F /* HALPanel.m in Sources */,
-				948D85E618F2DE2100DDDB5A /* HALDiskUsageGraph.m in Sources */,
-				9486E5A819017D1200E174C5 /* HALNetworkRecorder.m in Sources */,
-				949197D219057039006042DF /* HALIntroductionViewController.m in Sources */,
-				9473C7981912CBCA008CD056 /* HALBarGraphBlock.m in Sources */,
-				9461383819111E7F006F18DA /* HALPanelTableView.m in Sources */,
-				948D85C618F0600A00DDDB5A /* HALProcessorUsageRecord.m in Sources */,
-				94536FD3190DA0B800960E5F /* HALCpuDetailsBarGraph.m in Sources */,
-				94D6EEC918EDEA8500740F04 /* HALConnectionsRecorder.m in Sources */,
-				947D8E2118F55CA400C48954 /* HALCpuViewController.m in Sources */,
-				9473C79C1912CD3F008CD056 /* HALMemoryRecorder.m in Sources */,
-				9473C7A4191505C6008CD056 /* HALResourceRecorder.m in Sources */,
-				944EF21E18EC3FD70047E519 /* HALServerPool.m in Sources */,
-				94D6EECC18EDF44500740F04 /* HALConnectionsViewController.m in Sources */,
-				944EF22318EC479F0047E519 /* HALServersTableCell.m in Sources */,
-				94175D2D18F965A800DB14B7 /* HALMainViewController.m in Sources */,
-				948D85EA18F2DF1800DDDB5A /* HALMountsRecorder.m in Sources */,
-				948D85CA18F064AF00DDDB5A /* HALCpuGraph.m in Sources */,
+				9473C7A01912CE0A008CD056 /* SRVSwapRecorder.m in Sources */,
+				94536FDF190E223700960E5F /* Panel.m in Sources */,
+				948D85E618F2DE2100DDDB5A /* DiskUsageGraph.m in Sources */,
+				9486E5A819017D1200E174C5 /* SRVNetworkRecorder.m in Sources */,
+				949197D219057039006042DF /* IntroductionViewController.m in Sources */,
+				9473C7981912CBCA008CD056 /* BarGraphBlock.m in Sources */,
+				9461383819111E7F006F18DA /* PanelTableView.m in Sources */,
+				948D85C618F0600A00DDDB5A /* SRVProcessorUsageRecord.m in Sources */,
+				94536FD3190DA0B800960E5F /* CpuDetailsBarGraph.m in Sources */,
+				94D6EEC918EDEA8500740F04 /* SRVConnectionsRecorder.m in Sources */,
+				947D8E2118F55CA400C48954 /* CpuViewController.m in Sources */,
+				9473C79C1912CD3F008CD056 /* SRVMemoryRecorder.m in Sources */,
+				9473C7A4191505C6008CD056 /* SRVResourceRecorder.m in Sources */,
+				944EF21E18EC3FD70047E519 /* ServerPool.m in Sources */,
+				94D6EECC18EDF44500740F04 /* ConnectionsViewController.m in Sources */,
+				944EF22318EC479F0047E519 /* ServersTableCell.m in Sources */,
+				94175D2D18F965A800DB14B7 /* MainViewController.m in Sources */,
+				948D85EA18F2DF1800DDDB5A /* SRVMountsRecorder.m in Sources */,
+				948D85CA18F064AF00DDDB5A /* CpuGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,50 +1079,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94536FCC190DA04B00960E5F /* HALCpuDetailsPanel.m in Sources */,
-				94175D1818F6E2E200DB14B7 /* HALMount.m in Sources */,
-				9454AD8F18F029B60046A2E9 /* HALProcessorsRecorder.m in Sources */,
-				944EF26518ED49010047E519 /* GCDAsyncSocket.m in Sources */,
-				944EF25618EC6B450047E519 /* HALServer.m in Sources */,
-				944EF25B18EC6B530047E519 /* HALApplicationDelegate.m in Sources */,
-				94D856DE18FAD0310097C385 /* HALServerEditViewController.m in Sources */,
-				9486E5AD19017D2900E174C5 /* HALNetworkInterface.m in Sources */,
-				9486E5B119017F2500E174C5 /* HALNetworkViewController.m in Sources */,
-				9473C7951912BF9F008CD056 /* HALBarGraph.m in Sources */,
-				944EF25A18EC6B500047E519 /* HALServersTable.m in Sources */,
-				94536FD8190E1EDB00960E5F /* HALMemoryPanel.m in Sources */,
-				944EF25718EC6B470047E519 /* HALServerPool.m in Sources */,
-				94536FE4190FBEB300960E5F /* HALCpuGraphPanel.m in Sources */,
-				9486E5BB1901923000E174C5 /* HALNetworkInterfacePanel.m in Sources */,
+				94536FCC190DA04B00960E5F /* CpuDetailsPanel.m in Sources */,
+				94175D1818F6E2E200DB14B7 /* SRVMountRecord.m in Sources */,
+				9454AD8F18F029B60046A2E9 /* SRVProcessorsRecorder.m in Sources */,
+				944EF25618EC6B450047E519 /* Server.m in Sources */,
+				944EF25B18EC6B530047E519 /* ApplicationDelegate.m in Sources */,
+				94D856DE18FAD0310097C385 /* ServerEditViewController.m in Sources */,
+				9486E5AD19017D2900E174C5 /* SRVNetworkInterface.m in Sources */,
+				9486E5B119017F2500E174C5 /* NetworkViewController.m in Sources */,
+				9473C7951912BF9F008CD056 /* BarGraph.m in Sources */,
+				944EF25A18EC6B500047E519 /* ServersTable.m in Sources */,
+				94536FD8190E1EDB00960E5F /* MemoryPanel.m in Sources */,
+				944EF25718EC6B470047E519 /* ServerPool.m in Sources */,
+				94536FE4190FBEB300960E5F /* CpuGraphPanel.m in Sources */,
+				9486E5BB1901923000E174C5 /* NetworkInterfacePanel.m in Sources */,
 				944EF23518EC6AC60047E519 /* main.m in Sources */,
-				94175D2E18F965A800DB14B7 /* HALMainViewController.m in Sources */,
-				94536FDC190E1EF500960E5F /* HALSwapPanel.m in Sources */,
-				948D85D518F19A2200DDDB5A /* HALMountsViewController.m in Sources */,
-				9461383D19111EAE006F18DA /* HALPanelTableViewCell.m in Sources */,
-				94AD97BA18EE9BBB0001C695 /* HALConnectionsTableCell.m in Sources */,
-				9486E56318FFC1BD00E174C5 /* HALMonitorTabBarController.m in Sources */,
-				94772EA619CC1B350095DD1B /* HALDesigner.m in Sources */,
-				94AD97C818EF16FE0001C695 /* HALMonitorViewController.m in Sources */,
-				94AD97BC18EE9BC60001C695 /* HALConnectionsRecorder.m in Sources */,
-				9473C7A11912CE0A008CD056 /* HALSwapRecorder.m in Sources */,
-				94536FE0190E223700960E5F /* HALPanel.m in Sources */,
-				94175D1C18F71DAB00DB14B7 /* HALMountPanel.m in Sources */,
-				9486E5A919017D1200E174C5 /* HALNetworkRecorder.m in Sources */,
-				949197D319057039006042DF /* HALIntroductionViewController.m in Sources */,
-				9473C7991912CBCB008CD056 /* HALBarGraphBlock.m in Sources */,
-				9461383919111E7F006F18DA /* HALPanelTableView.m in Sources */,
-				94AD97BB18EE9BC30001C695 /* HALConnectionRecord.m in Sources */,
-				94536FD4190DA0B800960E5F /* HALCpuDetailsBarGraph.m in Sources */,
-				94AD97B918EE9BB80001C695 /* HALConnectionsViewController.m in Sources */,
-				947D8E2218F55CA400C48954 /* HALCpuViewController.m in Sources */,
-				9473C79D1912CD3F008CD056 /* HALMemoryRecorder.m in Sources */,
-				9473C7A5191505C6008CD056 /* HALResourceRecorder.m in Sources */,
-				948D85C718F0600A00DDDB5A /* HALProcessorUsageRecord.m in Sources */,
-				94AD97C918EFE2FA0001C695 /* HALServerInformationPanel.m in Sources */,
-				948D85E718F2DE2100DDDB5A /* HALDiskUsageGraph.m in Sources */,
-				948D85CB18F064AF00DDDB5A /* HALCpuGraph.m in Sources */,
-				948D85EB18F2DF1800DDDB5A /* HALMountsRecorder.m in Sources */,
-				944EF25918EC6B4D0047E519 /* HALServersTableCell.m in Sources */,
+				94175D2E18F965A800DB14B7 /* MainViewController.m in Sources */,
+				94536FDC190E1EF500960E5F /* SwapPanel.m in Sources */,
+				948D85D518F19A2200DDDB5A /* MountsViewController.m in Sources */,
+				9461383D19111EAE006F18DA /* PanelTableViewCell.m in Sources */,
+				94AD97BA18EE9BBB0001C695 /* ConnectionsTableCell.m in Sources */,
+				94772EAA19CC3D210095DD1B /* GCDAsyncSocket.m in Sources */,
+				9486E56318FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */,
+				94772EA619CC1B350095DD1B /* Designer.m in Sources */,
+				94AD97C818EF16FE0001C695 /* MonitorViewController.m in Sources */,
+				94AD97BC18EE9BC60001C695 /* SRVConnectionsRecorder.m in Sources */,
+				9473C7A11912CE0A008CD056 /* SRVSwapRecorder.m in Sources */,
+				94536FE0190E223700960E5F /* Panel.m in Sources */,
+				94175D1C18F71DAB00DB14B7 /* MountPanel.m in Sources */,
+				9486E5A919017D1200E174C5 /* SRVNetworkRecorder.m in Sources */,
+				949197D319057039006042DF /* IntroductionViewController.m in Sources */,
+				9473C7991912CBCB008CD056 /* BarGraphBlock.m in Sources */,
+				9461383919111E7F006F18DA /* PanelTableView.m in Sources */,
+				94AD97BB18EE9BC30001C695 /* SRVConnectionRecord.m in Sources */,
+				94536FD4190DA0B800960E5F /* CpuDetailsBarGraph.m in Sources */,
+				94AD97B918EE9BB80001C695 /* ConnectionsViewController.m in Sources */,
+				947D8E2218F55CA400C48954 /* CpuViewController.m in Sources */,
+				9473C79D1912CD3F008CD056 /* SRVMemoryRecorder.m in Sources */,
+				9473C7A5191505C6008CD056 /* SRVResourceRecorder.m in Sources */,
+				948D85C718F0600A00DDDB5A /* SRVProcessorUsageRecord.m in Sources */,
+				94AD97C918EFE2FA0001C695 /* ServerInformationPanel.m in Sources */,
+				948D85E718F2DE2100DDDB5A /* DiskUsageGraph.m in Sources */,
+				948D85CB18F064AF00DDDB5A /* CpuGraph.m in Sources */,
+				948D85EB18F2DF1800DDDB5A /* SRVMountsRecorder.m in Sources */,
+				944EF25918EC6B4D0047E519 /* ServersTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1281,6 +1287,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1297,6 +1304,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

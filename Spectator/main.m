@@ -6,11 +6,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "HALApplicationDelegate.h"
+#import "ApplicationDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HALApplicationDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ApplicationDelegate class]));
     }
 }

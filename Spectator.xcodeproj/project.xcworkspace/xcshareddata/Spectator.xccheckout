@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7A013B2C-5BD6-4328-8188-58918961088D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Spectator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
+		<string>https://github.com/robbiehanson/CocoaAsyncSocket</string>
+		<key>4BFD05B79894A82890CC7D77ED290F4C7A6017AB</key>
+		<string>git-xcode:spectator/ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Spectator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
+		<string>../../../GitHub/CocoaAsyncSocket</string>
+		<key>4BFD05B79894A82890CC7D77ED290F4C7A6017AB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>git-xcode:spectator/ios</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4BFD05B79894A82890CC7D77ED290F4C7A6017AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CocoaAsyncSocket</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4BFD05B79894A82890CC7D77ED290F4C7A6017AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
