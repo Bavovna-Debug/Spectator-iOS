@@ -206,7 +206,10 @@ typedef enum {
 {
     socket = [[GCDAsyncSocket alloc] initWithDelegate:self
                                         delegateQueue:dispatch_get_main_queue()];
-    
+
+    [socket setIPv4Enabled:YES];
+    [socket setIPv6Enabled:YES];
+
     NSString *dnsName;
 #ifdef SCREENSHOTING
     if ([self.serverName compare:@"Dr. Zoidberg"] == NSOrderedSame)

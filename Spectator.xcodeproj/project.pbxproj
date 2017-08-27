@@ -103,8 +103,6 @@
 		9473C7A5191505C6008CD056 /* SRVResourceRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */; };
 		94772EA519CC1B350095DD1B /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* Designer.m */; };
 		94772EA619CC1B350095DD1B /* Designer.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA419CC1B350095DD1B /* Designer.m */; };
-		94772EA919CC3D210095DD1B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */; };
-		94772EAA19CC3D210095DD1B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */; };
 		947D8E2118F55CA400C48954 /* CpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* CpuViewController.m */; };
 		947D8E2218F55CA400C48954 /* CpuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947D8E2018F55CA400C48954 /* CpuViewController.m */; };
 		9486E56218FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9486E56118FFC1BD00E174C5 /* MonitorTabBarController.m */; };
@@ -165,6 +163,7 @@
 		949197C819056768006042DF /* Introduction.strings in Resources */ = {isa = PBXBuildFile; fileRef = 949197CA19056768006042DF /* Introduction.strings */; };
 		949197D219057039006042DF /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* IntroductionViewController.m */; };
 		949197D319057039006042DF /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 949197D119057039006042DF /* IntroductionViewController.m */; };
+		949B3D211F53411500947460 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 949B3D201F53411500947460 /* GCDAsyncSocket.m */; };
 		94AD97B918EE9BB80001C695 /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EECB18EDF44500740F04 /* ConnectionsViewController.m */; };
 		94AD97BA18EE9BBB0001C695 /* ConnectionsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EED018EE77F200740F04 /* ConnectionsTableCell.m */; };
 		94AD97BB18EE9BC30001C695 /* SRVConnectionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */; };
@@ -291,8 +290,6 @@
 		9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRVResourceRecorder.m; sourceTree = "<group>"; };
 		94772EA319CC1B350095DD1B /* Designer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Designer.h; sourceTree = "<group>"; };
 		94772EA419CC1B350095DD1B /* Designer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Designer.m; sourceTree = "<group>"; };
-		94772EA719CC3D210095DD1B /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = ../../GitHub/CocoaAsyncSocket/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = ../../GitHub/CocoaAsyncSocket/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		947D8E1F18F55CA400C48954 /* CpuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CpuViewController.h; sourceTree = "<group>"; };
 		947D8E2018F55CA400C48954 /* CpuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CpuViewController.m; sourceTree = "<group>"; };
 		9486E56018FFC1BD00E174C5 /* MonitorTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonitorTabBarController.h; sourceTree = "<group>"; };
@@ -337,6 +334,8 @@
 		949197CE1905676F006042DF /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Introduction.strings; sourceTree = "<group>"; };
 		949197D019057039006042DF /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionViewController.h; sourceTree = "<group>"; };
 		949197D119057039006042DF /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionViewController.m; sourceTree = "<group>"; };
+		949B3D201F53411500947460 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		949B3D221F53412100947460 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		94AD97BE18EEAAFA0001C695 /* InetConnectionAppeared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InetConnectionAppeared.png; path = ../Images/InetConnections/InetConnectionAppeared.png; sourceTree = "<group>"; };
 		94AD97BF18EEAAFA0001C695 /* InetConnectionDisappeared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = InetConnectionDisappeared.png; path = ../Images/InetConnections/InetConnectionDisappeared.png; sourceTree = "<group>"; };
 		94AD97C218EF14650001C695 /* ServerInformationPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerInformationPanel.h; sourceTree = "<group>"; };
@@ -411,12 +410,12 @@
 		940A201618EBD89C00620F45 = {
 			isa = PBXGroup;
 			children = (
+				949B3D1F1F5340D500947460 /* Cocoa */,
 				940A203118EBD89C00620F45 /* ApplicationDelegate.h */,
 				940A203218EBD89C00620F45 /* ApplicationDelegate.m */,
 				94175D2A18F9658C00DB14B7 /* Main */,
 				94D6EECD18EDF47000740F04 /* Monitor */,
 				94D6EECE18EDF49200740F04 /* Server */,
-				94772EA219CC1A630095DD1B /* Cocoa */,
 				940A203418EBD89C00620F45 /* Images.xcassets */,
 				944EF25418EC6AFF0047E519 /* Localizations */,
 				944EF25C18EC6BB20047E519 /* Images */,
@@ -690,17 +689,30 @@
 		9469D2D119CDAA42002530B6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9473C7A2191505C6008CD056 /* SRVResourceRecorder.h */,
+				9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */,
+				9454AD8C18F014860046A2E9 /* SRVProcessorsRecorder.h */,
+				9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */,
+				948D85C418F0600A00DDDB5A /* SRVProcessorUsageRecord.h */,
+				948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */,
+				9473C79A1912CD3F008CD056 /* SRVMemoryRecorder.h */,
+				9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */,
+				9473C79E1912CE0A008CD056 /* SRVSwapRecorder.h */,
+				9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */,
+				948D85E818F2DF1800DDDB5A /* SRVMountsRecorder.h */,
+				948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */,
+				94175D1518F6E2E200DB14B7 /* SRVMountRecord.h */,
+				94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */,
+				9486E5A619017D1200E174C5 /* SRVNetworkRecorder.h */,
+				9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */,
+				9486E5AA19017D2900E174C5 /* SRVNetworkInterface.h */,
+				9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */,
+				94D6EEC718EDEA8500740F04 /* SRVConnectionsRecorder.h */,
+				94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */,
+				94D6EEC418EDD2C100740F04 /* SRVConnectionRecord.h */,
+				94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */,
 			);
 			name = Services;
-			sourceTree = "<group>";
-		};
-		94772EA219CC1A630095DD1B /* Cocoa */ = {
-			isa = PBXGroup;
-			children = (
-				94772EA719CC3D210095DD1B /* GCDAsyncSocket.h */,
-				94772EA819CC3D210095DD1B /* GCDAsyncSocket.m */,
-			);
-			name = Cocoa;
 			sourceTree = "<group>";
 		};
 		948D85EC18F3087800DDDB5A /* CircleGraph */ = {
@@ -710,6 +722,15 @@
 				94175D1118F6DE5F00DB14B7 /* CircleGraphBackground.png */,
 			);
 			name = CircleGraph;
+			sourceTree = "<group>";
+		};
+		949B3D1F1F5340D500947460 /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				949B3D221F53412100947460 /* GCDAsyncSocket.h */,
+				949B3D201F53411500947460 /* GCDAsyncSocket.m */,
+			);
+			name = Cocoa;
 			sourceTree = "<group>";
 		};
 		94AD97BD18EEAAEB0001C695 /* InetConnections */ = {
@@ -754,28 +775,6 @@
 				944EF21918EC3EC20047E519 /* Server.h */,
 				944EF21A18EC3EC20047E519 /* Server.m */,
 				9469D2D119CDAA42002530B6 /* Services */,
-				9473C7A2191505C6008CD056 /* SRVResourceRecorder.h */,
-				9473C7A3191505C6008CD056 /* SRVResourceRecorder.m */,
-				9454AD8C18F014860046A2E9 /* SRVProcessorsRecorder.h */,
-				9454AD8D18F014860046A2E9 /* SRVProcessorsRecorder.m */,
-				948D85C418F0600A00DDDB5A /* SRVProcessorUsageRecord.h */,
-				948D85C518F0600A00DDDB5A /* SRVProcessorUsageRecord.m */,
-				9473C79A1912CD3F008CD056 /* SRVMemoryRecorder.h */,
-				9473C79B1912CD3F008CD056 /* SRVMemoryRecorder.m */,
-				9473C79E1912CE0A008CD056 /* SRVSwapRecorder.h */,
-				9473C79F1912CE0A008CD056 /* SRVSwapRecorder.m */,
-				948D85E818F2DF1800DDDB5A /* SRVMountsRecorder.h */,
-				948D85E918F2DF1800DDDB5A /* SRVMountsRecorder.m */,
-				94175D1518F6E2E200DB14B7 /* SRVMountRecord.h */,
-				94175D1618F6E2E200DB14B7 /* SRVMountRecord.m */,
-				9486E5A619017D1200E174C5 /* SRVNetworkRecorder.h */,
-				9486E5A719017D1200E174C5 /* SRVNetworkRecorder.m */,
-				9486E5AA19017D2900E174C5 /* SRVNetworkInterface.h */,
-				9486E5AB19017D2900E174C5 /* SRVNetworkInterface.m */,
-				94D6EEC718EDEA8500740F04 /* SRVConnectionsRecorder.h */,
-				94D6EEC818EDEA8500740F04 /* SRVConnectionsRecorder.m */,
-				94D6EEC418EDD2C100740F04 /* SRVConnectionRecord.h */,
-				94D6EEC518EDD2C100740F04 /* SRVConnectionRecord.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -1026,6 +1025,7 @@
 				9454AD8E18F014860046A2E9 /* SRVProcessorsRecorder.m in Sources */,
 				94175D1718F6E2E200DB14B7 /* SRVMountRecord.m in Sources */,
 				94D6EEC618EDD2C100740F04 /* SRVConnectionRecord.m in Sources */,
+				949B3D211F53411500947460 /* GCDAsyncSocket.m in Sources */,
 				9486E5AC19017D2900E174C5 /* SRVNetworkInterface.m in Sources */,
 				9486E5B019017F2500E174C5 /* NetworkViewController.m in Sources */,
 				9473C7941912BF9F008CD056 /* BarGraph.m in Sources */,
@@ -1040,7 +1040,6 @@
 				94175D1B18F71DAB00DB14B7 /* MountPanel.m in Sources */,
 				9461383C19111EAE006F18DA /* PanelTableViewCell.m in Sources */,
 				94D6EED118EE77F200740F04 /* ConnectionsTableCell.m in Sources */,
-				94772EA919CC3D210095DD1B /* GCDAsyncSocket.m in Sources */,
 				9486E56218FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */,
 				94772EA519CC1B350095DD1B /* Designer.m in Sources */,
 				948D85D418F19A2200DDDB5A /* MountsViewController.m in Sources */,
@@ -1099,7 +1098,6 @@
 				948D85D518F19A2200DDDB5A /* MountsViewController.m in Sources */,
 				9461383D19111EAE006F18DA /* PanelTableViewCell.m in Sources */,
 				94AD97BA18EE9BBB0001C695 /* ConnectionsTableCell.m in Sources */,
-				94772EAA19CC3D210095DD1B /* GCDAsyncSocket.m in Sources */,
 				9486E56318FFC1BD00E174C5 /* MonitorTabBarController.m in Sources */,
 				94772EA619CC1B350095DD1B /* Designer.m in Sources */,
 				94AD97C818EF16FE0001C695 /* MonitorViewController.m in Sources */,

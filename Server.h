@@ -15,7 +15,7 @@
 #import "SRVProcessorsRecorder.h"
 #import "SRVSwapRecorder.h"
 
-#define SCREENSHOTING
+#undef SCREENSHOTING
 
 @protocol ServerConnectionDelegate;
 @protocol ServerMonitoringDelegate;

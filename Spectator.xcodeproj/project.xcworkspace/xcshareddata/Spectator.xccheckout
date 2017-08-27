@@ -16,7 +16,7 @@
 		<string>git-xcode:spectator/ios</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Spectator.xcodeproj/project.xcworkspace</string>
+	<string>Spectator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1C75F1C5CFCB95B3702F6F632FA05ED5244B519E</key>
